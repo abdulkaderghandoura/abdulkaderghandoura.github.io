@@ -1,84 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Abdulkader Ghandoura</title>
-    <link rel="stylesheet" href="style.css">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Abdulkader Ghandoura</title>
+		<link rel="stylesheet" href="style.css">
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-KCD21Z4217"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-KCD21Z4217"></script>
+		<script src="script.js"></script>
+	</head>
 
-	  gtag('config', 'G-KCD21Z4217');
-	</script>
+	<body>
+		<header>
+			<!-- Your photo -->
+			<img src="images/my-photo_1.jpg" alt="Abdulkader Ghandoura">
+			<!-- Your name -->
+			<h1>Abdulkader Ghandoura</h1>
+			
+			<ul class="contact-links">
+				<li>
+					<a href="https://scholar.google.com/citations?user=T5MMLHwAAAAJ&hl=en">
+						Google Scholar
+					</a>
+				</li>
+				<li>
+					<a href="https://www.linkedin.com/in/abdulkaderghandoura">
+						LinkedIn
+					</a>
+				</li>
+				<li>
+					<a href="https://github.com/abdulkaderghandoura/">
+						GitHub
+					</a>
+				</li>
+				<li>
+					<a href="https://www.facebook.com/ghandoura.abdulkader">
+						Facebook
+					</a>
+				</li>
+				<li>
+					<a href="https://www.instagram.com/abdulkader.ghandoura">
+						Instagram
+					</a>
+				</li>
+				<li>
+					<a href="https://www.youtube.com/@abdulkaderghandoura">
+						YouTube
+					</a>
+				</li>
+				<li>
+					<a href="https://twitter.com/abdulkaderghan">
+						Twitter
+					</a>
+				</li>
+			</ul>
+		</header>
 
-</head>
+		<main>
+			<div class="tabs">
+				<div class="tab active" data-section="summary" onclick="showSection('summary')">Summary</div>
+				<div class="tab" data-section="publications" onclick="showSection('publications')">Publications</div>
+				<div class="tab" data-section="datasets" onclick="showSection('datasets')">Datasets</div>
+			</div>			
 
-<body>
-    <header>
-        <!-- Your photo -->
-        <img src="images/my-photo.jpg" alt="Abdulkader Ghandoura">
-        <!-- Your name -->
-        <h1>Abdulkader Ghandoura</h1>
-		
-		<ul class="contact-links">
-			<li>
-				<a href="https://scholar.google.com/citations?user=T5MMLHwAAAAJ&hl=en">
-					Google Scholar
-				</a>
-			</li>
-			<li>
-				<a href="https://www.linkedin.com/in/abdulkaderghandoura">
-					LinkedIn
-				</a>
-			</li>
-			<li>
-				<a href="https://www.facebook.com/ghandoura.abdulkader">
-					Facebook
-				</a>
-			</li>
-			<li>
-				<a href="https://www.instagram.com/abdulkader.ghandoura">
-					Instagram
-				</a>
-			</li>
-			<li>
-				<a href="https://www.youtube.com/@abdulkaderghandoura">
-					YouTube
-				</a>
-			</li>
-			<li>
-				<a href="https://twitter.com/abdulkaderghan">
-					Twitter
-				</a>
-			</li>
-		</ul>
-		
-    </header>
+			<section id="summary">
+				<p>
+					Master's student in Data Engineering and Analytics at the Technical University of Munich, with a research focus on Artificial Intelligence in Medicine. Holds a bachelor's degree in Information Systems Engineering. Passionate about problem-solving, with six years of experience as a contestant, coach, problem-setter, and judge in the International Collegiate Programming Contest. DAAD scholar, volunteering to support Syrian students in pursuing postgraduate studies abroad through academic mentorship programs with two NGOs, Syrian Youth Empowerment and Jusoor.
+				</p>
+			</section>
+	
+			<section id="publications">
+				<ul class="publications-and-datasets-links">
+					<li>
+						Ghandoura, Abdulkader, Farouk Hjabo, and Oumayma Al Dakkak. &ldquo;<a href="https://doi.org/10.1016/j.engappai.2021.104267">Building and benchmarking an Arabic Speech Commands dataset for small-footprint keyword spotting.</a>&rdquo; Engineering Applications of Artificial Intelligence 102 (2021): 104267.
+					</li>
+				</ul>
+			</section>
 
-    <main>
-        <section id="about">
-            <h2>Summary</h2>
-            <p>
-                Master's student in Data Engineering and Analytics at the Technical University of Munich, with a research focus on Artificial Intelligence in Medicine. Holds a bachelor's degree in Information Systems Engineering. Passionate about problem-solving, with six years of experience as a contestant, coach, problem-setter, and judge in the International Collegiate Programming Contest. DAAD scholar, volunteering to support Syrian students in pursuing postgraduate studies abroad through academic mentorship programs with two NGOs, Syrian Youth Empowerment and Jusoor.
-            </p>
-        </section>
+			<section id="datasets">
+				<ul class="publications-and-datasets-links">
+					<li>
+						<a href="https://doi.org/10.5281/zenodo.4662481">Arabic Speech Commands Dataset (CC BY 4.0):</a> Our dataset is a list of pairs (x, y), where x is the input speech signal, and y is the corresponding keyword. The final dataset consists of 12000 such pairs, comprising 40 keywords. Each audio file is one-second in length sampled at 16 kHz. We have 30 participants, each of them recorded 10 utterances for each keyword. Therefore, we have 300 audio files for each keyword in total (30 * 10 * 40 = 12000), and the total size of all the recorded keywords is ~384 MB. The dataset also contains several background noise recordings we obtained from various natural sources of noise. We saved these audio files in a separate folder with the name background_noise and a total size of ~49 MB.
+					</li>
+				</ul>
+			</section>
 
-        <section id="publications">
-            <h2>Publications</h2>
-            <ul class="publications-links">
-                <li>
-                    <a href="https://doi.org/10.1016/j.engappai.2021.104267">Ghandoura, Abdulkader, Farouk Hjabo, and Oumayma Al Dakkak. "Building and benchmarking an Arabic Speech Commands dataset for small-footprint keyword spotting." Engineering Applications of Artificial Intelligence 102 (2021): 104267.</a>
-                </li>
-            </ul>
-        </section>
-
-    </main>
-</body>
-
+		</main>
+	</body>
 </html>
