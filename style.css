@@ -27,24 +27,24 @@ header h1 {
 }
 
 main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 800px; /* Set the maximum width for the main content */
     margin: 0 auto; /* Center align the main content using auto margins */
     padding: 20px; /* Add padding around the main content */
 }
 
-main h2 {
-    margin-top: 30px; /* Add some top margin to section titles */
-    border-bottom: 2px solid #333; /* Add a bottom border to section titles */
-	font-variant: small-caps; /* Applies the small caps effect to the text */
-}
-
 main p {
-	margin-top: 10px;
 	color: #333;
 }
 
 section {
     text-align: justify; /* Justify the text within sections for better alignment */
+    width: 100%;
+    display: none;
+    padding: 20px;
+    /* border: 1px solid #ccc; */
 }
 
 .contact-links {
@@ -60,7 +60,7 @@ section {
 }
 
 .contact-links a {
-    color: #333; /* Set the color of the social media links */
+    /* color: #333; */
     text-decoration: none; /* Remove underline from the social media links */
     font-size: 16px; /* Set the font size of the social media links */
 }
@@ -69,7 +69,39 @@ section {
     text-decoration: underline; /* Add underline on hover for better visibility */
 }
 
-.publications-links a {
-    color: #333; /* Optionally set the color of the links */
-	text-decoration: none; /* Remove underline from the contact links */
+.publications-and-datasets-links {
+    padding: 0;
+    margin: 0 0 0 20px;
+    text-align: justify;
+}
+
+.publications-and-datasets-links a {
+    /* color: #333; */
+    text-decoration: none;
+}
+
+.publications-and-datasets-links a:hover {
+    text-decoration: underline;
+}
+
+.tabs {
+    display: flex;
+    width: 100%;    
+}
+
+.tab {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    background-color: #f2f2f2;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+}
+
+.tab.active {
+    /* width: 100%; */
+    font-weight: bold; /* Make the active tab bold */
+    background-color: #ddd; /* Change background color of the active tab */
+    border: none;
 }
