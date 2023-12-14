@@ -39,7 +39,7 @@ main p {
 	color: #333;
 }
 
-section {
+main section {
     text-align: justify; /* Justify the text within sections for better alignment */
     width: 100%;
     display: none;
