@@ -44,7 +44,6 @@ main section {
     width: 100%;
     display: none;
     padding: 20px;
-    /* border: 1px solid #ccc; */
 }
 
 .contact-links {
@@ -60,12 +59,19 @@ main section {
 }
 
 .contact-links a {
-    /* color: #333; */
     text-decoration: none; /* Remove underline from the social media links */
     font-size: 16px; /* Set the font size of the social media links */
 }
 
 .contact-links a:hover {
+    text-decoration: underline; /* Add underline on hover for better visibility */
+}
+
+.summary-links a {
+    text-decoration: none; /* Remove underline from the social media links */
+}
+
+.summary-links a:hover {
     text-decoration: underline; /* Add underline on hover for better visibility */
 }
 
@@ -76,7 +82,6 @@ main section {
 }
 
 .publications-and-datasets-links a {
-    /* color: #333; */
     text-decoration: none;
 }
 
@@ -100,7 +105,6 @@ main section {
 }
 
 .tab.active {
-    /* width: 100%; */
     font-weight: bold; /* Make the active tab bold */
     background-color: #ddd; /* Change background color of the active tab */
     border: none;
