@@ -2,15 +2,25 @@
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+  <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
 
-<url>
-  <loc>https://www.abdulkaderghandoura.com/</loc>
-  <lastmod>2025-07-26T04:09:15+00:00</lastmod>
-</url>
+  <url>
+    <loc>https://www.abdulkaderghandoura.com/</loc>
+    <image:image>
+      <image:loc>https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_1x1.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_4x3.jpg</image:loc>
+    </image:image>
+    <image:image>
+      <image:loc>https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_16x9.jpg</image:loc>
+    </image:image>
+    <lastmod>2025-07-26T18:09:23+00:00</lastmod>
+  </url>
 
 
 </urlset>
