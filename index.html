@@ -16,10 +16,7 @@
 		<link rel="me" href="https://orcid.org/0000-0001-6514-3983">
 		<link rel="canonical" href="https://www.abdulkaderghandoura.com/">
 
-
 		<!-- Other Profile Links -->
-		<link rel="me" href="https://bsky.app/profile/aghandoura.bsky.social">
-		<link rel="me" href="https://gitlab.com/abdulkaderghandoura">
 		<link rel="me" href="https://www.xing.com/profile/Abdulkader_Ghandoura025656">
 		<link rel="me" href="https://independent.academia.edu/abdulkaderghan">
 		<link rel="me" href="https://loop.frontiersin.org/people/3149109/overview">
@@ -30,6 +27,7 @@
 		<link rel="me" href="https://slideslive.com/abdulkaderghandoura">
 
 		<!-- Open Graph -->
+		<meta property="og:locale" content="en_US">
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="Abdulkader Ghandoura">
 		<meta property="og:description" content="Research Intern at Harvard · Student Researcher at Helmholtz AI · Master's Student at TUM · Academic Mentor at SYE NGO">	
@@ -76,29 +74,90 @@
 		<!-- Site JS -->
 		<script src="script.js" defer></script>
 		
+		
+		<!-- 
+			TO be added later:
+			"alumniOf": { "@id": "#org-tum" },
+		-->
+		
 		<!-- JSON-LD (schema.org) -->
 		<script type="application/ld+json">
 		{
 			"@context": "https://schema.org",
 			"@graph": [
 				{
+					"@type": "ImageObject",
+					"@id": "#hero-image",
+					"url": "https://commons.wikimedia.org/wiki/File:Abdulkader_Ghandoura_Harvard_2025.jpg",
+					"contentUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Abdulkader_Ghandoura_Harvard_2025.jpg",
+					"thumbnailUrl": "https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-harvard-2025_1x1.jpg",
+					"caption": "Portrait of Abdulkader Ghandoura at Harvard (2025)",
+					"license": "https://creativecommons.org/licenses/by-sa/4.0/",
+					"creator": { "@type": "Person", "name": "Abdulkader Ghandoura" },
+					"creditText": "Abdulkader Ghandoura / CC BY-SA 4.0",
+					"copyrightNotice": "© Abdulkader Ghandoura (CC BY-SA 4.0)",
+					"acquireLicensePage": "https://commons.wikimedia.org/wiki/File:Abdulkader_Ghandoura_Harvard_2025.jpg",
+					"width":  { "@type": "QuantitativeValue", "value": 2425, "unitCode": "E37" },
+					"height": { "@type": "QuantitativeValue", "value": 3233, "unitCode": "E37" },				
+					"dateCreated": "2025-03-18T00:00:00+00:00",
+					"dateModified": "2025-08-08T00:00:00+00:00"
+				},
+				{
+					"@type": "ImageObject",
+					"@id": "#img-1x1",
+					"contentUrl": "https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_1x1.jpg",
+					"width":  { "@type": "QuantitativeValue", "value": 867, "unitCode": "E37" },
+					"height": { "@type": "QuantitativeValue", "value": 867, "unitCode": "E37" }
+				},
+				{
+					"@type": "ImageObject",
+					"@id": "#img-4x3",
+					"contentUrl": "https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_4x3.jpg",
+					"width":  { "@type": "QuantitativeValue", "value": 1423, "unitCode": "E37" },
+					"height": { "@type": "QuantitativeValue", "value": 1067, "unitCode": "E37" }
+				},
+				{
+					"@type": "ImageObject",
+					"@id": "#img-16x9",
+					"contentUrl": "https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_16x9.jpg",
+					"width":  { "@type": "QuantitativeValue", "value": 1600, "unitCode": "E37" },
+					"height": { "@type": "QuantitativeValue", "value": 900,  "unitCode": "E37" }
+				},
+				{
+					"@type": "CollegeOrUniversity",
+					"@id": "#org-tum",
+					"name": "Technical University of Munich",
+					"url": "https://www.tum.de/",
+					"sameAs": "https://www.wikidata.org/wiki/Q157808"
+				},
+				{
+					"@type": "CollegeOrUniversity",
+					"@id": "#org-harvard",
+					"name": "Harvard University",
+					"url": "https://www.harvard.edu/",
+					"sameAs": "https://www.wikidata.org/wiki/Q13371"
+				},
+				{
+					"@type": "ResearchOrganization",
+					"@id": "#org-helmholtz-munich",
+					"name": "Helmholtz Zentrum München",
+					"url": "https://www.helmholtz-munich.de/",
+					"sameAs": "https://www.wikidata.org/wiki/Q878592"
+				},
+				{
+					"@type": "Organization",
+					"@id": "#org-sye",
+					"name": "SYE Initiative",
+					"url": "https://www.sye-initiative.org/"
+				},				  
+				{
 					"@type": "ProfilePage",
 					"@id": "https://www.abdulkaderghandoura.com/",
 					"url": "https://www.abdulkaderghandoura.com/",
 					"mainEntity": { "@id": "#person" },
-					"primaryImageOfPage": {
-						"@type": "ImageObject",
-						"@id": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Abdulkader_Ghandoura_Harvard_2025.jpg",
-						"url": "https://commons.wikimedia.org/wiki/File:Abdulkader_Ghandoura_Harvard_2025.jpg",
-						"contentUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Abdulkader_Ghandoura_Harvard_2025.jpg",
-						"thumbnailUrl": "https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-harvard-2025_1x1.jpg",
-						"caption": "Portrait of Abdulkader Ghandoura at Harvard (2025)",
-						"license": "https://creativecommons.org/licenses/by-sa/4.0/",
-						"creator": { "@type": "Person", "name": "Abdulkader Ghandoura" },
-						"creditText": "Abdulkader Ghandoura / CC BY-SA 4.0"						
-					  },					
-					"dateCreated": "2023-09-06",
-					"dateModified": "2025-08-09"
+					"primaryImageOfPage": { "@id": "#hero-image" },					
+					"dateCreated": "2023-09-06T00:00:00+00:00",
+					"dateModified": "2025-08-13T00:00:00+00:00"
 				},
 				{
 					"@type": "Person",
@@ -127,69 +186,19 @@
 					"description": "Abdulkader Ghandoura is a master's student in the Data Engineering and Analytics program at the Technical University of Munich, with a research focus on Artificial Intelligence in Medicine.",
 					
 					"image": [
-						{
-							"@type": "ImageObject",
-							"@id": "https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_1x1.jpg",
-							"contentUrl":  "https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_1x1.jpg",
-							"width": 867,
-							"height": 867
-						},
-						{
-							"@type": "ImageObject",
-							"@id": "https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_4x3.jpg",
-							"contentUrl":  "https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_4x3.jpg",
-							"width": 1423,
-							"height": 1067
-						},
-						{
-							"@type": "ImageObject",
-							"@id": "https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_16x9.jpg",
-							"contentUrl":  "https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_16x9.jpg",
-							"width": 1600,
-							"height": 900
-						},
-						{
-							"@type": "ImageObject",
-							"@id": "https://commons.wikimedia.org/wiki/File:Abdulkader_Ghandoura_Harvard_2025.jpg",
-							"url": "https://commons.wikimedia.org/wiki/File:Abdulkader_Ghandoura_Harvard_2025.jpg",
-							"contentUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Abdulkader_Ghandoura_Harvard_2025.jpg",
-							"caption": "Portrait of Abdulkader Ghandoura at Harvard (2025)",
-							"width": 2425,
-							"height": 3233							
-						}
+						{ "@id": "#hero-image" },
+						{ "@id": "#img-1x1" },
+						{ "@id": "#img-4x3" },
+						{ "@id": "#img-16x9" }
 					],
-
-					"alumniOf": {
-						"@type": "CollegeOrUniversity",
-						"name": "Technical University of Munich",
-						"url": "https://www.tum.de/"
-					},
 
 					"affiliation": [
-						{
-							"@type": "CollegeOrUniversity",
-							"name": "Technical University of Munich",
-							"url": "https://www.tum.de/",
-							"sameAs": "https://www.wikidata.org/wiki/Q157808"
-						},
-						{
-							"@type": "CollegeOrUniversity",
-							"name": "Harvard University",
-							"url": "https://www.harvard.edu/",
-							"sameAs": "https://www.wikidata.org/wiki/Q13371"
-						},
-						{
-							"@type": "ResearchOrganization",
-							"name": "Helmholtz Zentrum München",
-							"url": "https://www.helmholtz-munich.de/",
-							"sameAs": "https://www.wikidata.org/wiki/Q878592"
-						}
+						{ "@id": "#org-tum" },
+						{ "@id": "#org-harvard" },
+						{ "@id": "#org-helmholtz-munich" }
 					],
 
-					"memberOf": {
-						"@type": "Organization",
-						"name": "SYE Initiative"
-					},
+					"memberOf": { "@id": "#org-sye" },
 					
 					"knowsLanguage": ["ar","en","de"],
 
@@ -201,17 +210,8 @@
 					],
 
 					"subjectOf": [
-						{
-							"@type": "ScholarlyArticle",
-							"@id": "https://doi.org/10.1016/j.engappai.2021.104267"
-						},
-						{
-							"@type": "Dataset",
-							"@id": "https://doi.org/10.5281/zenodo.4662481",
-							"name": "Arabic Speech Commands Dataset",
-							"description": "12,000 one-second clips at 16 kHz covering 40 Arabic keywords (30 speakers x 10 utterances) plus background noise. CC BY 4.0.",
-  							"url": "https://doi.org/10.5281/zenodo.4662481"
-						}
+						{ "@id": "#paper-asc" },
+						{ "@id": "#dataset-asc" }
 					],
 		
 					"sameAs": [
@@ -225,10 +225,51 @@
 						"https://www.facebook.com/ghandoura.abdulkader",
 						"https://github.com/abdulkaderghandoura/",
 						"https://www.researchgate.net/profile/Abdulkader-Ghandoura",
+						"https://www.xing.com/profile/Abdulkader_Ghandoura025656",
+						"https://about.me/abdulkaderghandoura",
 						"https://www.youtube.com/@abdulkaderghandoura",
-						"https://www.kaggle.com/abdulkaderghandoura"
+						"https://www.kaggle.com/abdulkaderghandoura",
+						"https://bsky.app/profile/aghandoura.bsky.social",
+						"https://gitlab.com/abdulkaderghandoura"
 					]
-				}
+				},
+
+				{
+					"@type": "ScholarlyArticle",
+					"@id": "#paper-asc",					
+					"identifier": {
+						"@type": "PropertyValue",
+						"propertyID": "DOI",
+						"value": "10.1016/j.engappai.2021.104267",
+						"url": "https://doi.org/10.1016/j.engappai.2021.104267"
+					},
+					"sameAs": "https://doi.org/10.1016/j.engappai.2021.104267",
+					"headline": "Building and benchmarking an Arabic Speech Commands dataset for small-footprint keyword spotting",
+					"author": [
+					  { "@type": "Person", "name": "Abdulkader Ghandoura" },
+					  { "@type": "Person", "name": "Farouk Hjabo" },
+					  { "@type": "Person", "name": "Oumayma Al Dakkak" }
+					]										
+				},
+				{
+					"@type": "Dataset",
+					"@id": "#dataset-asc",
+					"identifier": {
+						"@type": "PropertyValue",
+						"propertyID": "DOI",
+						"value": "10.5281/zenodo.4662481",
+						"url": "https://doi.org/10.5281/zenodo.4662481"
+					},					
+					"name": "Arabic Speech Commands Dataset",
+					"description": "12,000 one-second clips at 16 kHz covering 40 Arabic keywords (30 speakers x 10 utterances) plus background noise. CC BY 4.0.",
+					"url": "https://doi.org/10.5281/zenodo.4662481",
+					"creator": [
+						{ "@type": "Person", "name": "Abdulkader Ghandoura" },
+						{ "@type": "Person", "name": "Farouk Hjabo" },
+						{ "@type": "Person", "name": "Oumayma Al Dakkak" }
+					],
+					"license": "https://creativecommons.org/licenses/by/4.0/"					
+				}				
 			]
 		}
 		</script>
@@ -242,7 +283,7 @@
 
 			<!-- Your name -->
 			<h1>Abdulkader Ghandoura</h1>
-			<address>Munich, Bavaria, Germany</address>
+			<p class="location">Munich, Bavaria, Germany</p>
 			
 			<section id="Profiles">
 				<ul class="contact-links">
@@ -303,7 +344,7 @@
 			<section id="summary">
 				<h2 class="visually-hidden">Summary</h2>
 				<p class="summary-links">
-					<a href="https://pnl.bwh.harvard.edu/index.php/abdulkader-ghandoura/">Research Intern</a> at Harvard Medical School, focusing on estimating neural orientation distribution fields for diffusion MRI reconstruction. Interested in signal and image processing for solving inverse problems in medical imaging. Pursuing a Master's degree in Data Engineering and Analytics at the Technical University of Munich, funded by a DAAD. Volunteers on the graduate leadership team of Syrian Youth Empowerment, a national nonprofit that helps Syrian students apply to universities and scholarships worldwide. Holds a Bachelor's degree in Information Systems Engineering with a specialization in Intelligent Systems.
+					<a href="https://pnl.bwh.harvard.edu/index.php/abdulkader-ghandoura/">Research Intern</a> at Harvard Medical School, focusing on estimating neural orientation distribution fields for diffusion MRI reconstruction. Student Researcher at the Helmholtz AI Central Unit in Munich, developing a tool to detect and classify organoids in microscopy images. Interested in signal and image processing for solving inverse problems in medical imaging. Pursuing a Master's degree in Data Engineering and Analytics at the Technical University of Munich, funded by a DAAD. Volunteers on the graduate leadership team of Syrian Youth Empowerment, a national nonprofit that helps Syrian students apply to universities and scholarships worldwide. Holds a Bachelor's degree in Information Systems Engineering with a specialization in Intelligent Systems.
 				</p>
 			</section>
 			
