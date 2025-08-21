@@ -10,16 +10,33 @@
 
   <url>
     <loc>https://www.abdulkaderghandoura.com/</loc>
+
     <image:image>
       <image:loc>https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_1x1.jpg</image:loc>
+      <image:title>Abdulkader Ghandoura - عبد القادر غندورة</image:title>
+      <image:caption>Portrait of Abdulkader Ghandoura (1:1)</image:caption>
     </image:image>
+
     <image:image>
       <image:loc>https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_4x3.jpg</image:loc>
+      <image:title>Abdulkader Ghandoura - عبد القادر غندورة</image:title>
+      <image:caption>Portrait of Abdulkader Ghandoura (4:3)</image:caption>      
     </image:image>
+
     <image:image>
       <image:loc>https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_16x9.jpg</image:loc>
+      <image:title>Abdulkader Ghandoura - عبد القادر غندورة</image:title>
+      <image:caption>Portrait of Abdulkader Ghandoura (16:9)</image:caption>      
     </image:image>
-    <lastmod>2025-08-15T12:40:40+00:00</lastmod>
+
+    <image:image>
+      <image:loc>https://upload.wikimedia.org/wikipedia/commons/b/bd/Abdulkader_Ghandoura_Harvard_2025.jpg</image:loc>
+      <image:title>Abdulkader Ghandoura - عبد القادر غندورة</image:title>
+      <image:caption>Portrait of Abdulkader Ghandoura at Harvard (2025)</image:caption>
+      <image:license>https://creativecommons.org/licenses/by-sa/4.0/</image:license>
+    </image:image>
+
+    <lastmod>2025-08-21T00:00:00+00:00</lastmod>
   </url>
 
 

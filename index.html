@@ -9,13 +9,14 @@
 		<!-- Primary SEO tags -->
 		<title>Abdulkader Ghandoura</title>
 		<meta name="description" 
-			  content="Abdulkader Ghandoura is a master's student in Data Engineering and Analytics at the Technical University of Munich, with a research focus on Artificial Intelligence in Medicine.">
-
+			  content="Abdulkader Ghandoura is a master's student in Data Engineering and Analytics at the Technical University of Munich (TUM), with a research focus on artificial intelligence in medicine.">
+		<link rel="canonical" href="https://www.abdulkaderghandoura.com/">
 		<link rel="stylesheet" href="style.css" media="all">
+		
+		<!-- Identity links -->
 		<link rel="me" href="https://www.wikidata.org/wiki/Q134437494">
 		<link rel="me" href="https://orcid.org/0000-0001-6514-3983">
-		<link rel="canonical" href="https://www.abdulkaderghandoura.com/">
-
+		
 		<!-- Other Profile Links -->
 		<link rel="me" href="https://www.xing.com/profile/Abdulkader_Ghandoura025656">
 		<link rel="me" href="https://independent.academia.edu/abdulkaderghan">
@@ -28,10 +29,17 @@
 
 		<!-- Open Graph -->
 		<meta property="og:locale" content="en_US">
-		<meta property="og:type" content="website">
+		<meta property="og:type" content="profile">
 		<meta property="og:title" content="Abdulkader Ghandoura">
 		<meta property="og:description" content="Research Intern at Harvard · Student Researcher at Helmholtz AI · Master's Student at TUM · Academic Mentor at SYE NGO">	
+		<meta property="og:url" content="https://www.abdulkaderghandoura.com/">
+		<meta property="og:site_name" content="Abdulkader Ghandoura">
 		
+		<!-- Open Graph: profile-specific -->
+		<meta property="profile:first_name" content="Abdulkader">
+		<meta property="profile:last_name" content="Ghandoura">
+		<meta property="profile:username" content="abdulkaderghandoura">
+
 		<!-- 16:9 -->
 		<meta property="og:image"         content="https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_16x9.jpg">
 		<meta property="og:image:width"   content="1600">
@@ -50,15 +58,10 @@
 		<meta property="og:image:height"  content="867">
 		<meta property="og:image:alt"     content="Portrait of Abdulkader Ghandoura - 1:1 version">
 
-		<!-- Global tags -->
-		<meta property="og:url"           content="https://www.abdulkaderghandoura.com/">
-		<meta property="og:site_name"     content="Abdulkader Ghandoura">
-
-
 		<!-- Twitter Card -->
 		<meta name="twitter:card"        content="summary_large_image">
 		<meta name="twitter:title"       content="Abdulkader Ghandoura">
-		<meta name="twitter:description" content="Student at TUM researching AI in Medicine.">
+		<meta name="twitter:description" content="Master's student at the Technical University of Munich (TUM), focusing on artificial intelligence applications in the medical domain.">
 		<meta name="twitter:image"       content="https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_16x9.jpg">
 		<meta name="twitter:image:alt" 	 content="Portrait of Abdulkader Ghandoura">
 		<meta name="twitter:site"        content="@abdulkaderghan">
@@ -74,17 +77,15 @@
 		<!-- Site JS -->
 		<script src="script.js" defer></script>
 		
-		
 		<!-- 
 			TO be added later:
 			"alumniOf": { "@id": "#org-tum" },
 
 			"hasCredential": {
-			"@type": "EducationalOccupationalCredential",
-			"name": "M.Sc. Data Engineering and Analytics",
-			"credentialCategory": "Master’s degree"
+				"@type": "EducationalOccupationalCredential",
+				"name": "M.Sc. Data Engineering and Analytics",
+				"credentialCategory": "Master’s degree"
 			}
-
 		-->
 		
 		<!-- JSON-LD (schema.org) -->
@@ -93,8 +94,27 @@
 			"@context": "https://schema.org",
 			"@graph": [
 				{
+					"@type": "WebSite",
+					"@id": "https://www.abdulkaderghandoura.com/#website",
+					"url": "https://www.abdulkaderghandoura.com/",
+					"name": "Abdulkader Ghandoura",
+					"inLanguage": "en",
+					"publisher": { "@id": "https://www.abdulkaderghandoura.com/#person" }
+				},
+				{
+					"@type": "ProfilePage",
+					"@id": "https://www.abdulkaderghandoura.com/#webpage",
+					"url": "https://www.abdulkaderghandoura.com/",
+					"inLanguage": "en",
+					"isPartOf": { "@id": "https://www.abdulkaderghandoura.com/#website" },
+					"mainEntity": { "@id": "https://www.abdulkaderghandoura.com/#person" },
+					"primaryImageOfPage": { "@id": "https://www.abdulkaderghandoura.com/#hero-image" },				
+					"dateCreated": "2023-09-06T00:00:00+00:00",
+					"dateModified": "2025-08-21T00:00:00+00:00"
+				},				
+				{
 					"@type": "ImageObject",
-					"@id": "#hero-image",
+					"@id": "https://www.abdulkaderghandoura.com/#hero-image",
 					"url": "https://commons.wikimedia.org/wiki/File:Abdulkader_Ghandoura_Harvard_2025.jpg",
 					"contentUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Abdulkader_Ghandoura_Harvard_2025.jpg",
 					"thumbnailUrl": "https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-harvard-2025_1x1.jpg",
@@ -111,64 +131,55 @@
 				},
 				{
 					"@type": "ImageObject",
-					"@id": "#img-1x1",
+					"@id": "https://www.abdulkaderghandoura.com/#img-1x1",
 					"contentUrl": "https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_1x1.jpg",
 					"width":  { "@type": "QuantitativeValue", "value": 867, "unitCode": "E37" },
 					"height": { "@type": "QuantitativeValue", "value": 867, "unitCode": "E37" }
 				},
 				{
 					"@type": "ImageObject",
-					"@id": "#img-4x3",
+					"@id": "https://www.abdulkaderghandoura.com/#img-4x3",
 					"contentUrl": "https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_4x3.jpg",
 					"width":  { "@type": "QuantitativeValue", "value": 1423, "unitCode": "E37" },
 					"height": { "@type": "QuantitativeValue", "value": 1067, "unitCode": "E37" }
 				},
 				{
 					"@type": "ImageObject",
-					"@id": "#img-16x9",
+					"@id": "https://www.abdulkaderghandoura.com/#img-16x9",
 					"contentUrl": "https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_16x9.jpg",
 					"width":  { "@type": "QuantitativeValue", "value": 1600, "unitCode": "E37" },
 					"height": { "@type": "QuantitativeValue", "value": 900,  "unitCode": "E37" }
 				},
 				{
 					"@type": "CollegeOrUniversity",
-					"@id": "#org-tum",
+					"@id": "https://www.abdulkaderghandoura.com/#org-tum",
 					"name": "Technical University of Munich",
 					"url": "https://www.tum.de/",
 					"sameAs": "https://www.wikidata.org/wiki/Q157808"
 				},
 				{
 					"@type": "CollegeOrUniversity",
-					"@id": "#org-harvard",
+					"@id": "https://www.abdulkaderghandoura.com/#org-harvard",
 					"name": "Harvard University",
 					"url": "https://www.harvard.edu/",
 					"sameAs": "https://www.wikidata.org/wiki/Q13371"
 				},
 				{
 					"@type": "ResearchOrganization",
-					"@id": "#org-helmholtz-munich",
+					"@id": "https://www.abdulkaderghandoura.com/#org-helmholtz-munich",
 					"name": "Helmholtz Zentrum München",
 					"url": "https://www.helmholtz-munich.de/",
 					"sameAs": "https://www.wikidata.org/wiki/Q878592"
 				},
 				{
 					"@type": "Organization",
-					"@id": "#org-sye",
+					"@id": "https://www.abdulkaderghandoura.com/#org-sye",
 					"name": "SYE Initiative",
 					"url": "https://www.sye-initiative.org/"
-				},				  
-				{
-					"@type": "ProfilePage",
-					"@id": "https://www.abdulkaderghandoura.com/",
-					"url": "https://www.abdulkaderghandoura.com/",
-					"mainEntity": { "@id": "#person" },
-					"primaryImageOfPage": { "@id": "#hero-image" },					
-					"dateCreated": "2023-09-06T00:00:00+00:00",
-					"dateModified": "2025-08-14T00:00:00+00:00"
 				},
 				{
 					"@type": "Person",
-					"@id": "#person",
+					"@id": "https://www.abdulkaderghandoura.com/#person",
 					"name": "Abdulkader Ghandoura",
 					"givenName": "Abdulkader",
 					"familyName": "Ghandoura",
@@ -176,15 +187,22 @@
 						"@value": "عبد القادر غندورة",
 						"@language": "ar"
 					},
-					"birthDate": "1997-01-03",
-					"birthPlace": { "@type": "Place", "name": "Idlib, Syria" },							  
 					"jobTitle": "Researcher",
+					"birthDate": "1997-01-03",
+					"birthPlace": {
+						"@type": "Place",
+						"name": "Idlib",
+						"address": {
+							"@type": "PostalAddress",
+							"addressCountry": "SY"
+						}
+					},
 					"nationality": {
 						"@type": "Country",
 						"name": "Syria"
-					},
+					},				  
 					"url": "https://www.abdulkaderghandoura.com/",
-					"mainEntityOfPage": { "@id": "https://www.abdulkaderghandoura.com/" },
+					"mainEntityOfPage": { "@id": "https://www.abdulkaderghandoura.com/#webpage" },
 			
 					"identifier": {
 						"@type": "PropertyValue",
@@ -195,19 +213,19 @@
 					"description": "Abdulkader Ghandoura is a master's student in Data Engineering and Analytics at the Technical University of Munich, with a research focus on Artificial Intelligence in Medicine.",
 					
 					"image": [
-						{ "@id": "#hero-image" },
-						{ "@id": "#img-1x1" },
-						{ "@id": "#img-4x3" },
-						{ "@id": "#img-16x9" }
+						{ "@id": "https://www.abdulkaderghandoura.com/#hero-image" },
+						{ "@id": "https://www.abdulkaderghandoura.com/#img-1x1" },
+						{ "@id": "https://www.abdulkaderghandoura.com/#img-4x3" },
+						{ "@id": "https://www.abdulkaderghandoura.com/#img-16x9" }
 					],
 
 					"affiliation": [
-						{ "@id": "#org-tum" },
-						{ "@id": "#org-harvard" },
-						{ "@id": "#org-helmholtz-munich" }
+						{ "@id": "https://www.abdulkaderghandoura.com/#org-tum" },
+						{ "@id": "https://www.abdulkaderghandoura.com/#org-harvard" },
+						{ "@id": "https://www.abdulkaderghandoura.com/#org-helmholtz-munich" }
 					],
 
-					"memberOf": { "@id": "#org-sye" },
+					"memberOf": { "@id": "https://www.abdulkaderghandoura.com/#org-sye" },
 					
 					"knowsLanguage": ["ar","en","de"],
 
@@ -219,8 +237,8 @@
 					],
 
 					"subjectOf": [
-						{ "@id": "#paper-asc" },
-						{ "@id": "#dataset-asc" }
+						{ "@id": "https://www.abdulkaderghandoura.com/#paper-asc" },
+						{ "@id": "https://www.abdulkaderghandoura.com/#dataset-asc" }
 					],
 		
 					"sameAs": [
@@ -232,9 +250,9 @@
 						"https://x.com/abdulkaderghan",
 						"https://www.instagram.com/abdulkader.ghandoura",
 						"https://www.facebook.com/ghandoura.abdulkader",
+						"https://www.xing.com/profile/Abdulkader_Ghandoura025656",
 						"https://github.com/abdulkaderghandoura/",
 						"https://www.researchgate.net/profile/Abdulkader-Ghandoura",
-						"https://www.xing.com/profile/Abdulkader_Ghandoura025656",
 						"https://about.me/abdulkaderghandoura",
 						"https://www.youtube.com/@abdulkaderghandoura",
 						"https://www.kaggle.com/abdulkaderghandoura",
@@ -245,7 +263,7 @@
 
 				{
 					"@type": "ScholarlyArticle",
-					"@id": "#paper-asc",					
+					"@id": "https://www.abdulkaderghandoura.com/#paper-asc",					
 					"identifier": {
 						"@type": "PropertyValue",
 						"propertyID": "DOI",
@@ -255,14 +273,14 @@
 					"sameAs": "https://doi.org/10.1016/j.engappai.2021.104267",
 					"headline": "Building and benchmarking an Arabic Speech Commands dataset for small-footprint keyword spotting",
 					"author": [
-					  { "@type": "Person", "name": "Abdulkader Ghandoura" },
+					  { "@id": "https://www.abdulkaderghandoura.com/#person" },
 					  { "@type": "Person", "name": "Farouk Hjabo" },
 					  { "@type": "Person", "name": "Oumayma Al Dakkak" }
 					]										
 				},
 				{
 					"@type": "Dataset",
-					"@id": "#dataset-asc",
+					"@id": "https://www.abdulkaderghandoura.com/#dataset-asc",
 					"identifier": {
 						"@type": "PropertyValue",
 						"propertyID": "DOI",
@@ -273,7 +291,7 @@
 					"description": "12,000 one-second clips at 16 kHz covering 40 Arabic keywords (30 speakers x 10 utterances) plus background noise. CC BY 4.0.",
 					"url": "https://doi.org/10.5281/zenodo.4662481",
 					"creator": [
-						{ "@type": "Person", "name": "Abdulkader Ghandoura" },
+						{ "@id": "https://www.abdulkaderghandoura.com/#person" },
 						{ "@type": "Person", "name": "Farouk Hjabo" },
 						{ "@type": "Person", "name": "Oumayma Al Dakkak" }
 					],
