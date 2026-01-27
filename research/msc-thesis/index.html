@@ -3,54 +3,213 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO Blocking - Critical -->
+
+    <!-- SEO Blocking - Critical; TODO: Remove it upon publication -->
     <meta name="robots" content="noindex, nofollow">
     <meta name="googlebot" content="noindex, nofollow">
-    
+
+    <meta name="description" content="Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution">
     <title>Master's Thesis - Abdulkader Ghandoura</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.js"></script>
     
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: #ffffff;
-            color: #333333;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 2rem;
-            line-height: 1.6;
-        }
-        
-        .container {
-            max-width: 600px;
-            text-align: center;
-        }
-        
-        .message {
-            font-size: 1.125rem;
-            color: #555555;
-        }
-        
-        @media (max-width: 768px) {
-            .message {
-                font-size: 1rem;
-            }
-        }
-    </style>
+    <script src="script.js" defer></script> -->
+
 </head>
-<body>
-    <div class="container">
-        <p class="message">
-            The GitHub repository is currently private and accessible only to advisors from TUM and Harvard. Once the manuscript is submitted, it will be made public, and you will be redirected automatically.
-        </p>
-    </div>
+<body>  
+    <main class="container">
+        <!-- Header Section -->
+        <header>
+            <nav class="breadcrumb">
+                <a href="https://www.abdulkaderghandoura.com/">← Back to Homepage</a>
+            </nav>
+            <h1>Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution</h1>
+            
+            <div class="authors">
+                <span><a href="https://pnl.bwh.harvard.edu/index.php/abdulkader-ghandoura/">Abdulkader Ghandoura</a><sup>1,2</sup></span>,
+                <span><a href="https://sc.edu/study/colleges_schools/artsandsciences/statistics/our_people/directory/consagra_william.php">William Consagra</a><sup>1,3</sup></span>,
+                <span><a href="https://www.ce.cit.tum.de/lmt/team/mitarbeiter/zakour-marsil/">Marsil Zakour</a><sup>2</sup></span>,
+                <span><a href="https://pnl.bwh.harvard.edu/index.php/yogesh-rathi-ph-d/">Yogesh Rathi</a><sup>1</sup></span>
+            </div>
+
+            <div class="affiliations">
+                <p><sup>1</sup>Psychiatry Neuroimaging Laboratory, Brigham and Women's Hospital, Harvard Medical School, MA, USA</p>
+                <p><sup>2</sup>Chair of Media Technology, Munich Institute of Robotics and Machine Intelligence, School of Computation, Information and Technology, Technical University of Munich, Bavaria, Germany</p>
+                <p><sup>3</sup>Department of Statistics, University of South Carolina, SC, USA</p>
+            </div>
+
+            <div class="logos">
+                <img src="assets/hms-logo.png" alt="Harvard Medical School">
+                <img src="assets/pnl-logo.png" alt="Psychiatry Neuroimaging Laboratory, Brigham and Women's Hospital">
+                <img src="assets/tum-logo.png" alt="Technical University of Munich">
+                <img src="assets/usc-logo.png" alt="University of South Carolina">
+            </div>
+        </header>
+
+        <!-- Teaser/Summary -->
+        <section class="teaser">
+            <p>A novel framework for diffusion MRI super-resolution that leverages transferable anatomical priors from a high-resolution template to overcome limitations of existing voxel-wise methods and from-scratch training schemes of neural fields.</p>
+        </section>
+
+        <!-- Abstract -->
+        <section>
+            <h2>Abstract</h2>
+            <p>Resolving complex fiber geometries in brain white matter requires high-resolution diffusion MRI, which remains challenging due to long acquisition times and low signal-to-noise ratio (SNR). Orientation distribution functions (ODFs) model the orientational distribution of water molecule diffusion, overcoming the single-fiber limitation of diffusion tensors. Traditional methods estimate ODF fields at discrete voxels, limiting their ability to capture continuous spatial correlations in fiber orientations. Recent work has investigated implicit neural representations (INRs) for continuous, spatially-aware estimation of ODF fields. We propose a novel framework that leverages transferable microstructural knowledge from a pre-trained neural field for subject-specific ODF field estimation. We first fit a neural field once to a healthy high-resolution template scan. Then, for any low-resolution subject scan, we perform non-rigid registration followed by fine-tuning to adapt the network to subject-specific anatomy. This model-agnostic pipeline enables efficient super-resolution by amortizing computational cost through template pre-training. For 4&times; out-of-plane super-resolution from 5 mm to 1.25 mm on Human Connectome Project (HCP) data, our method reduces NRMSE by 36&ndash;49% and increases FSIM by 24&ndash;43% over a recent baseline, outperforming competing INR approaches with significantly reduced computational time. These gains hold alongside improvements in domain-specific metrics, suggesting practical utility.</p>
+        </section>
+
+        <!-- Links Section -->
+        <section class="links">
+            <h2>Resources</h2>
+            <ul>
+                <li><a href="#availability-notice">Preprint (arXiv)</a></li>
+                <li><a href="#availability-notice">Supplementary Material</a></li>
+                <li><a href="#availability-notice">Code (GitHub)</a></li>
+                <li><a href="#availability-notice">Dataset</a></li>
+            </ul>
+            <p id="availability-notice" class="highlight-box">The preprint, supplementary materials, and code will be made public upon publication.</p>
+        </section>
+
+        <!-- 
+        ============================================================
+        FIGURE SECTIONS - HOW TO ADD NEW SECTIONS
+        ============================================================
+        
+        To add a new figure section, copy the structure below:
+        
+        <section class="figure-section">
+            <h2>Your Section Title</h2>
+            <div class="figure">
+                <img src="path/to/your/image.jpg" alt="Description of figure">
+                <p class="caption">Figure caption goes here. Explain what the reader should observe in the figure.</p>
+            </div>
+        </section>
+        
+        For multiple figures in a row, use the "figure-grid" class:
+        
+        <section class="figure-section">
+            <h2>Comparative Results</h2>
+            <div class="figure-grid">
+                <div class="figure">
+                    <img src="image1.jpg" alt="Method A">
+                    <p class="caption">Method A results.</p>
+                </div>
+                <div class="figure">
+                    <img src="image2.jpg" alt="Method B">
+                    <p class="caption">Method B results.</p>
+                </div>
+            </div>
+        </section>
+        
+        The responsive design will automatically:
+        - Stack figures vertically on mobile devices
+        - Display them side-by-side on larger screens
+        - Maintain proper spacing and readability
+        ============================================================
+        -->
+
+        <!-- Example Figure Section 1 -->
+        <section class="figure-section">
+            <h2>Method Overview</h2>
+            <div class="figure">
+                <img src="assets/pipeline.png" alt="Overview of the proposed method">
+                <p class="caption"><strong>Framework overview.</strong> Three-stage framework: (1) Pre-training an INR on a high-resolution dMRI template. (2) Subject-template registration via a composite transformation <i>T</i>. (3) Fine-tuning to subject anatomy using low-resolution data.</p>
+            </div>
+        </section>
+
+        <section class="figure-section">
+            <h2>Registration and Convergence</h2>
+            <div class="figure">
+                <img src="assets/axial_grid.jpg" alt="Registration results">
+                <p class="caption"><strong>Through-plane displacement.</strong> Deformed grid of an axial slice after applying the displacement field. A regular 128&times;128 grid created in the fixed image space was transformed through <i>T</i>, resulting in curved grid lines that visualize the spatial deformation. Grid line colors encode the z-axis displacement of voxels, revealing the through-plane deformation pattern.</p> <!-- TODO (cmap label): Through-plane displacement -->
+            </div>
+            <div class="figure">
+                <img src="assets/loss_curves.jpg" alt="Convergence plot">
+                <p class="caption"><strong>Training convergence comparison.</strong> Training MSE (L2) loss over epochs comparing the NODF baseline (Consagra et al., 2024; blue; 3,000 epochs) with the proposed approach initialized from a prior (red; converges within 100 epochs).</p>
+            </div>
+        </section>
+
+        <!-- Example Figure Section 2: Grid Layout -->
+        <section class="figure-section">
+            <h2>Qualitative Results</h2>
+            <div class="figure">
+                <img src="assets/qualitative.jpg" alt="Qualitative comparison of methods">
+                <p class="caption"><strong>Reconstruction results and runtime.</strong> The figure shows DTI in sagittal view with zoomed cerebellar microstructure, fODFs in coronal view overlaid on GFA (with a yellow arrow indicating bundles), and tractography in axial view showing estimated streamlines for a missing slice from extremely anisotropic data. Red indicates left-right, green indicates anterior-posterior, and blue indicates superior-inferior direction. Our proposed method recovers fine details within 5 minutes, better matching the ground truth than both baselines, each trained for 1 hour.</p>
+            </div>
+        </section>
+
+        <!-- Example Figure Section 3: Single Figure -->
+        <section class="figure-section">
+            <h2>Quantitative Comparison</h2>
+            <div class="figure">
+                <img src="assets/median_metrics_boxenplot.png" alt="Quantitative comparison table">
+                <p class="caption"><strong>Domain-specific metrics.</strong> Distribution of subject-wise median on 10 HCP subjects across three training checkpoints for ODF L2 norm error (proposed 0.08--0.09 vs. NODF baseline 0.11--0.23, HashEnc 0.12--0.13), GFA absolute error (0.023--0.026 vs. baseline/HashEnc 0.04--0.08), and eigenvector angular error (17--20&deg; vs. baseline 28--47&deg;, HashEnc 19--52&deg;).</p>
+            </div>
+            <div class="figure">
+                <img src="assets/fodf_peak_count.jpg" alt="fODF peak count comparison">
+                <p class="caption"><strong>Fiber ODF Peak Count Evaluation.</strong> MAE measures peak count error. Accuracy is the percentage of voxels with an exact peak count match. Angular Error is computed only where peak counts match. Peak distribution shows the percentage of voxels predicted in each category. Values show mean &plusmn; standard deviation for MAE and Angular Error.</p>
+            </div>            
+        </section>
+
+        <!-- Example Figure Section 4: Two-Column Grid -->
+        <!-- <section class="figure-section">
+            <h2>Ablation Study</h2>
+            <div class="figure-grid">
+                <div class="figure">
+                    <img src="https://via.placeholder.com/600x400/cccccc/666666?text=Component+Analysis" alt="Ablation study results">
+                    <p class="caption"><strong>Component Analysis.</strong> Impact of each module on overall performance.</p>
+                </div>
+                <div class="figure">
+                    <img src="https://via.placeholder.com/600x400/cccccc/666666?text=Visualization" alt="Feature visualization">
+                    <p class="caption"><strong>Feature Visualization.</strong> Learned representations at different network layers.</p>
+                </div>
+            </div>
+        </section> -->
+
+        <!-- Acknowledgments -->
+        <section>
+            <h2>Acknowledgments</h2>
+            <!-- <p>This work was supported by [Funding Agency] under Grant No. [Grant Number]. We thank [Names] for helpful discussions and [Dataset/Resource Provider] for making their data publicly available.</p> -->
+            <P>Data were provided in part by the Human Connectome Project, WU-Minn Consortium (Principal Investigators: David Van Essen and Kamil Ugurbil; 1U54MH091657), funded by the 16 NIH Institutes and Centers that support the NIH Blueprint for Neuroscience Research; and by the McDonnell Center for Systems Neuroscience at Washington University.</P>
+        </section>
+
+        <!-- Related Projects (Optional) -->
+        <section>
+            <h2>Related Projects</h2>
+            <ul class="related-links">
+                <li><a href="https://doi.org/10.1016/j.media.2024.103105" target="_blank">Consagra et al. NODF. Medical Image Analysis 2024</a></li>
+                <li><a href="https://link.springer.com/chapter/10.1007/978-3-031-72104-5_30" target="_blank">Dwedari et al. NODF-HashEnc. MICCAI 2024</a></li>
+            </ul>
+        </section>
+
+        <!-- Citation -->
+        <section>
+            <h2>Citation</h2>
+            <p class="highlight-box">Citation information will be available upon publication.</p>
+            <!-- <p class="citation-text">
+                First Author, Second Author, Third Author, Fourth Author. "Your Innovative Method Name: Descriptive Subtitle for Medical Image Analysis." <em>International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)</em>, 2024.
+            </p> -->
+            
+            <!-- <h3>BibTeX</h3>
+            <pre>
+                <code>@inproceedings{author2024method,
+                title={Your Innovative Method Name: Descriptive Subtitle for Medical Image Analysis},
+                author={Author, First and Author, Second and Author, Third and Author, Fourth},
+                booktitle={International Conference on Medical Image Computing and Computer Assisted Intervention},
+                pages={1--10},
+                year={2024},
+                organization={Springer}
+                }</code>
+            </pre> -->
+        </section>        
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2026 Psychiatry Neuroimaging Laboratory, Brigham and Women's Hospital, Harvard Medical School. All rights reserved.</p>
+        </footer>
+    </main>
 </body>
 </html>
