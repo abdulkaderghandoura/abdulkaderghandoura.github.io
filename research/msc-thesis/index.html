@@ -9,7 +9,7 @@
     <meta name="googlebot" content="noindex, nofollow">
 
     <meta name="description" content="Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution">
-    <title>Master's Thesis - Abdulkader Ghandoura</title>
+    <title>Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution</title>
     <link rel="stylesheet" href="style.css">
     <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
@@ -57,12 +57,12 @@
 
         <!-- Teaser/Summary -->
         <section class="teaser">
-            <p>We introduce a novel model-agnostic framework that addresses two key limitations of neural fields for diffusion MRI super-resolution: computational overhead of training from scratch and lack of anatomical guidance. By leveraging transferable priors from a high-resolution template via registration-guided fine-tuning, we achieve 1.25 mm through-plane resolution from 5 mm with 6&times; faster training, outperforming competing approaches. This improves reconstruction in time-constrained clinical acquisitions.</p>
+            <p><span class="tldr-label">TL;DR:</span> We introduce a novel model-agnostic framework that addresses two key limitations of neural fields for diffusion MRI super-resolution: computational overhead of training from scratch and lack of anatomical guidance. By leveraging transferable priors from a high-resolution template via registration-guided fine-tuning, we achieve 1.25 mm through-plane resolution from 5 mm with 6&times; faster training, outperforming competing approaches. This improves reconstruction in time-constrained clinical acquisitions.</p>
         </section>
 
         <!-- Abstract -->
         <section>
-            <h2>Abstract</h2>
+            <h2>Abstract</h2> <!-- Should we make the abstract inline as well? See: https://geometric-rl.mpi-inf.mpg.de/scenetok/ -->
             <p>Resolving complex fiber geometries in brain white matter requires high-resolution diffusion MRI at the cost of long acquisition times. This leads many clinical protocols to opt for low-resolution scans, which makes downstream microstructure estimation and tractography challenging. Implicit neural representations (INRs) can model diffusion signal continuously, enabling native single-subject super-resolution by querying the network at arbitrary spatial coordinates, yet existing methods often suffer from long training times and lack anatomical priors to regularize super-resolution by constraining the space of plausible reconstructions. We propose a novel transfer-learning framework that pre-trains an INR on a high-resolution template and then adapts it to subject-specific scans via registration and fine-tuning. For 4&times; through-plane super-resolution from 5 mm to 1.25 mm on Human Connectome Project (HCP) data, our method reduces NRMSE by 36&ndash;49% and increases FSIM by 24&ndash;43% over a recent baseline with 6&times; faster training, outperforming competing INR-based methods across both image quality and domain-specific metrics.</p>
         </section>
 
@@ -78,13 +78,12 @@
             <p id="availability-notice" class="highlight-box">The preprint, supplementary materials, and code will be made public upon publication.</p>
         </section>
 
-        <section>
+        <!-- <section>
             <h2>News</h2>
             <ul class="news-list">
                 <li><strong>[January 2026]</strong> Poster presented at MenaML, King Abdullah University of Science and Technology, Saudi Arabia.</li>
-                <!-- Future updates go above (reverse chronological) -->
             </ul>
-        </section>        
+        </section>         -->
 
         <!-- 
         ============================================================
@@ -190,7 +189,8 @@
         <section>
             <h2>Acknowledgments</h2>
             <!-- <p>This work was supported by [Funding Agency] under Grant No. [Grant Number]. We thank [Names] for helpful discussions and [Dataset/Resource Provider] for making their data publicly available.</p> -->
-            <P>This study is supported by National Institutes of Health grants: R01NS125307, R01MH132610, R01MH125860, R01EB032378, and R01MH119222. Data were provided by the Human Connectome Project, WU-Minn Consortium (Principal Investigators: David Van Essen and Kamil Ugurbil; 1U54MH091657), funded by the 16 NIH Institutes and Centers that support the NIH Blueprint for Neuroscience Research; and by the McDonnell Center for Systems Neuroscience at Washington University.</P>
+            <P>Research reported in this manuscript was supported by the National Institute of Neurological Disorders and Stroke, the National Institute of Mental Health, and the National Institute of Biomedical Imaging and Bioengineering of the National Institutes of Health under Award Numbers R01NS125307, R01MH132610, R01MH125860, R01EB032378, and R01MH119222. The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health. Data were provided by the Human Connectome Project, WU-Minn Consortium (Principal Investigators: David Van Essen and Kamil Ugurbil; 1U54MH091657), funded by the 16 NIH Institutes and Centers that support the NIH Blueprint for Neuroscience Research; and by the McDonnell Center for Systems Neuroscience at Washington University.</P>
+            <!-- TODO: After acceptance, replace manuscript with publication -->
         </section>
 
         <!-- Related Projects (Optional) -->
