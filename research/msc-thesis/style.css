@@ -48,10 +48,11 @@ h1 {
 }
 
 .venue {
-    font-size: 1.2rem;
-    color: #666;
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: #333;
     margin-bottom: 25px;
-    font-style: italic;
+    text-align: center;
 }
 
 /* Authors */
@@ -121,7 +122,7 @@ h1 {
     }
     
     .venue {
-        font-size: 1rem;
+        font-size: 1.15rem;
     }
     
     .authors {
@@ -265,24 +266,26 @@ a:hover {
 
 pre {
     background-color: #f5f5f5;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    padding: 15px;
+    border-radius: 8px;
+    padding: 1.25em 1.5em;
     overflow-x: auto;
     margin: 15px 0;
 }
 
 code {
-    font-family: "Courier New", Courier, monospace;
-    font-size: 0.9rem;
-    line-height: 1.5;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+    font-size: 0.875rem;
+    line-height: 1.6;
     color: #333;
 }
 
 @media (max-width: 768px) {
     pre {
-        padding: 12px;
-        font-size: 0.85rem;
+        padding: 1em;
+    }
+
+    pre code {
+        font-size: 0.8rem;
     }
 }
 
@@ -376,12 +379,12 @@ code {
     color: #0066cc;
 }
 
-ul:not(.links ul):not(.related-links) {
+ul:not(.links ul):not(.related-links):not(.news-list) {
     margin-left: 25px;
     margin-bottom: 15px;
 }
 
-ul:not(.links ul):not(.related-links) li {
+ul:not(.links ul):not(.related-links):not(.news-list) li {
     margin-bottom: 8px;
 }
 
