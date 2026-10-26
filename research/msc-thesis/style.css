@@ -84,15 +84,20 @@ h1 {
 }
 
 .author-notes {
-    font-size: 0.95rem;
-    color: #666;
+    font-size: 0.8rem;
+    color: #888;
+    line-height: 1.5;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 15px;
 }
 
 .author-notes p {
-    margin: 0px 0;
+    margin: 2px 0;
     text-align: center;
+}
+
+.author-notes .corresponding-author {
+    margin-bottom: 10px;
 }
 
 /* Logos */
@@ -466,11 +471,6 @@ img.zoomable:hover {
 /* Smooth scrolling for anchor links */
 html {
     scroll-behavior: smooth;
-}
-
-/* Add scroll margin to prevent header overlap */
-#availability-notice {
-    scroll-margin-top: 20px;
 }
 
 .tldr-label {

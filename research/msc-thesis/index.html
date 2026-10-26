@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="max-image-preview:large">
 
     <!-- TODO (visibility):
          - Link this page from the homepage (e.g., a 2026 timeline item)
-         - Link this page from the code README, PNL profile, ORCID, LinkedIn/X
-         - Replace the description below (currently = title) with 1-2 sentences from the TL;DR
-         - Add canonical, Open Graph, and Twitter Card tags (og:image: absolute URL to assets/pipeline.png)
-         - Add JSON-LD ScholarlyArticle (sameAs: arXiv URL; author: homepage #person @id) -->
+         - Link this page from the ORCID and LinkedIn/X -->
 
-    <meta name="description" content="Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution">
+    <!-- Primary SEO tags -->
     <title>Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution</title>
+    <meta name="description" content="A transfer-learning framework for neural fields that achieves 4&times; through-plane diffusion MRI super-resolution (5 mm to 1.25 mm) with 6&times; faster training.">
+    <link rel="canonical" href="https://www.abdulkaderghandoura.com/research/msc-thesis/">
     <link rel="stylesheet" href="style.css">
     <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
@@ -20,7 +20,92 @@
     <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.11.6/viewer.min.js"></script> -->
     
+    <!-- Open Graph -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution">
+    <meta property="og:description" content="A transfer-learning framework for neural fields that achieves 4&times; through-plane diffusion MRI super-resolution (5 mm to 1.25 mm) with 6&times; faster training.">
+    <meta property="og:url" content="https://www.abdulkaderghandoura.com/research/msc-thesis/">
+    <meta property="og:site_name" content="Abdulkader Ghandoura">
+    <meta property="og:image" content="https://www.abdulkaderghandoura.com/research/msc-thesis/assets/pipeline.png">
+    <meta property="og:image:width" content="4083">
+    <meta property="og:image:height" content="2172">
+    <meta property="og:image:alt" content="Diagram of the three-stage framework: pre-training on a high-resolution template, subject-template registration, and fine-tuning on low-resolution subject data">
+
+    <!-- Open Graph: article-specific -->
+    <meta property="article:published_time" content="2026-09-01T09:38:23+00:00">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution">
+    <meta name="twitter:description" content="A transfer-learning framework for neural fields that achieves 4&times; through-plane diffusion MRI super-resolution (5 mm to 1.25 mm) with 6&times; faster training.">
+    <meta name="twitter:image" content="https://www.abdulkaderghandoura.com/research/msc-thesis/assets/pipeline.png">
+    <meta name="twitter:image:alt" content="Diagram of the three-stage framework: pre-training on a high-resolution template, subject-template registration, and fine-tuning on low-resolution subject data">
+    <meta name="twitter:site" content="@abdulkaderghan">
+    <meta name="twitter:creator" content="@abdulkaderghan">
+
     <script src="script.js" defer></script>
+
+    <!-- JSON-LD (schema.org): keep in sync with the visible page; Google wants markup to match what's on the page -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "ItemPage",
+                "@id": "https://www.abdulkaderghandoura.com/research/msc-thesis/#webpage",
+                "url": "https://www.abdulkaderghandoura.com/research/msc-thesis/",
+                "name": "Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution",
+                "inLanguage": "en",
+                "isPartOf": { "@type": "WebSite", "@id": "https://www.abdulkaderghandoura.com/#website" },
+                "mainEntity": { "@id": "https://www.abdulkaderghandoura.com/research/msc-thesis/#article" },
+                "primaryImageOfPage": { "@id": "https://www.abdulkaderghandoura.com/research/msc-thesis/#pipeline-image" },
+                "dateCreated": "2026-01-15T00:00:00+00:00",
+                "dateModified": "2026-10-26T00:00:00+00:00"
+            },
+            {
+                "@type": "ImageObject",
+                "@id": "https://www.abdulkaderghandoura.com/research/msc-thesis/#pipeline-image",
+                "contentUrl": "https://www.abdulkaderghandoura.com/research/msc-thesis/assets/pipeline.png",
+                "caption": "Framework overview. Three-stage framework: (1) Pre-training an INR on a high-resolution dMRI template. (2) Subject-template registration via a composite transformation T. (3) Fine-tuning to subject anatomy using low-resolution data.",
+                "width":  { "@type": "QuantitativeValue", "value": 4083, "unitCode": "E37" },
+                "height": { "@type": "QuantitativeValue", "value": 2172, "unitCode": "E37" }
+            },
+            {
+                "@type": "ScholarlyArticle",
+                "@id": "https://www.abdulkaderghandoura.com/research/msc-thesis/#article",
+                "headline": "Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution",
+                "abstract": "Resolving complex fiber geometries in brain white matter requires high-resolution diffusion MRI at the cost of long acquisition times. This leads many clinical protocols to opt for low-resolution scans, making downstream microstructure estimation and tractography challenging. Implicit neural representations (INRs) can model the diffusion signal continuously, enabling native single-subject super-resolution by querying the network at arbitrary spatial coordinates, yet existing methods often suffer from long training times and lack a mechanism to incorporate anatomical priors to regularize super-resolution by constraining the space of plausible reconstructions. To address these limitations, we propose a novel transfer-learning framework that pre-trains an INR on a high-resolution template and then adapts it to subject-specific scans via registration and fine-tuning. For 4× through-plane super-resolution from 5 mm to 1.25 mm on Human Connectome Project (HCP) data, our method reduces NRMSE by 36–49% and increases FSIM by 24–43% over a recent baseline with 6× faster training, outperforming competing INR-based methods across both image quality and domain-specific metrics.",
+                "author": [
+                    {
+                        "@type": "Person",
+                        "@id": "https://www.abdulkaderghandoura.com/#person",
+                        "name": "Abdulkader Ghandoura",
+                        "url": "https://www.abdulkaderghandoura.com/"
+                    },
+                    { "@type": "Person", "name": "Marsil Zakour", "url": "https://www.ce.cit.tum.de/lmt/team/mitarbeiter/zakour-marsil/" },
+                    { "@type": "Person", "name": "William Consagra", "url": "https://sc.edu/study/colleges_schools/artsandsciences/statistics/our_people/directory/consagra_william.php" },
+                    { "@type": "Person", "name": "Yogesh Rathi", "url": "https://pnl.bwh.harvard.edu/index.php/yogesh-rathi-ph-d/" }
+                ],
+                "datePublished": "2026-09-01T09:38:23+00:00",
+                "inLanguage": "en",
+                "url": "https://www.abdulkaderghandoura.com/research/msc-thesis/",
+                "mainEntityOfPage": { "@id": "https://www.abdulkaderghandoura.com/research/msc-thesis/#webpage" },
+                "image": { "@id": "https://www.abdulkaderghandoura.com/research/msc-thesis/#pipeline-image" },
+                "identifier": {
+                    "@type": "PropertyValue",
+                    "propertyID": "DOI",
+                    "value": "10.48550/arXiv.2609.00981",
+                    "url": "https://doi.org/10.48550/arXiv.2609.00981"
+                },
+                "sameAs": [
+                    "https://arxiv.org/abs/2609.00981",
+                    "https://doi.org/10.48550/arXiv.2609.00981"
+                ]
+            }
+        ]
+    }
+    </script>
 
 </head>
 <body>  
@@ -35,20 +120,21 @@
             
             <div class="authors">
                 <span><a href="https://pnl.bwh.harvard.edu/index.php/abdulkader-ghandoura/">Abdulkader Ghandoura</a><sup>1,2,*</sup></span>,
-                <span><a href="https://www.ce.cit.tum.de/lmt/team/mitarbeiter/zakour-marsil/">Marsil Zakour</a><sup>2</sup></span>,
-                <span><a href="https://sc.edu/study/colleges_schools/artsandsciences/statistics/our_people/directory/consagra_william.php">William Consagra</a><sup>1,3,&dagger;</sup></span>,
-                <span><a href="https://pnl.bwh.harvard.edu/index.php/yogesh-rathi-ph-d/">Yogesh Rathi</a><sup>1,&dagger;</sup></span>
+                <span><a href="https://www.ce.cit.tum.de/lmt/team/mitarbeiter/zakour-marsil/">Marsil Zakour</a><sup>2,&dagger;</sup></span>,
+                <span><a href="https://sc.edu/study/colleges_schools/artsandsciences/statistics/our_people/directory/consagra_william.php">William Consagra</a><sup>1,3,&Dagger;</sup></span>,
+                <span><a href="https://pnl.bwh.harvard.edu/index.php/yogesh-rathi-ph-d/">Yogesh Rathi</a><sup>1,&Dagger;</sup></span>
             </div>
 
             <div class="affiliations">
-                <p><sup>1</sup>Psychiatry Neuroimaging Laboratory, Brigham and Women's Hospital, Harvard Medical School, MA, USA</p>
-                <p><sup>2</sup>Chair of Media Technology, Munich Institute of Robotics and Machine Intelligence, School of Computation, Information and Technology, Technical University of Munich, Bavaria, Germany</p>
-                <p><sup>3</sup>Department of Statistics, University of South Carolina, SC, USA</p>
+                <p><sup>1</sup>Psychiatry Neuroimaging Laboratory, Brigham and Women's Hospital, Harvard Medical School, Boston, MA, USA</p>
+                <p><sup>2</sup>School of Computation, Information and Technology, Technical University of Munich, Munich, Germany</p>
+                <p><sup>3</sup>Department of Statistics, University of South Carolina, Columbia, SC, USA</p>
             </div>
 
             <div class="author-notes">                
-                <p><sup>*</sup>Corresponding author: aghandoura(at)bwh(dot)harvard(dot)edu</p>
-                <p><sup>&dagger;</sup>These authors share senior authorship</p>                
+                <p class="corresponding-author"><sup>*</sup>Corresponding author: aghandoura(at)bwh(dot)harvard(dot)edu</p>
+                <p><sup>&dagger;</sup>M. Zakour is also with the Chair of Media Technology and Munich Institute of Robotics and Machine Intelligence, Technical University of Munich</p>
+                <p><sup>&Dagger;</sup>These authors share senior authorship</p>                
             </div>
             
             <div class="logos">
@@ -60,14 +146,14 @@
         </header>
 
         <!-- Teaser/Summary -->
-        <section class="teaser">
-            <p><span class="tldr-label">TL;DR:</span> We introduce a novel model-agnostic framework that addresses two key limitations of neural fields for diffusion MRI super-resolution: computational overhead of training from scratch and lack of anatomical guidance. By leveraging transferable priors from a high-resolution template via registration-guided fine-tuning, we achieve 1.25 mm through-plane resolution from 5 mm with 6&times; faster training, outperforming competing approaches. This improves reconstruction in time-constrained clinical acquisitions.</p>
-        </section>
+        <div class="teaser">
+            <p><span class="tldr-label">TL;DR:</span> We introduce a novel model-agnostic framework that addresses two key limitations of neural fields for diffusion MRI super-resolution: computational overhead of training from scratch and lack of anatomical guidance. By leveraging transferable priors from a high-resolution template via registration-guided fine-tuning, we achieve 1.25 mm through-plane resolution from 5 mm with 6&times; faster training, outperforming competing INR-based approaches. This improves reconstruction in time-constrained clinical acquisitions.</p>
+        </div>
 
         <!-- Abstract -->
         <section>
             <h2>Abstract</h2> <!-- Should we make the abstract inline as well? See: https://geometric-rl.mpi-inf.mpg.de/scenetok/ -->
-            <p>Resolving complex fiber geometries in brain white matter requires high-resolution diffusion MRI at the cost of long acquisition times. This leads many clinical protocols to opt for low-resolution scans, which makes downstream microstructure estimation and tractography challenging. Implicit neural representations (INRs) can model diffusion signal continuously, enabling native single-subject super-resolution by querying the network at arbitrary spatial coordinates, yet existing methods often suffer from long training times and lack anatomical priors to regularize super-resolution by constraining the space of plausible reconstructions. We propose a novel transfer-learning framework that pre-trains an INR on a high-resolution template and then adapts it to subject-specific scans via registration and fine-tuning. For 4&times; through-plane super-resolution from 5 mm to 1.25 mm on Human Connectome Project (HCP) data, our method reduces NRMSE by 36&ndash;49% and increases FSIM by 24&ndash;43% over a recent baseline with 6&times; faster training, outperforming competing INR-based methods across both image quality and domain-specific metrics.</p>
+            <p>Resolving complex fiber geometries in brain white matter requires high-resolution diffusion MRI at the cost of long acquisition times. This leads many clinical protocols to opt for low-resolution scans, making downstream microstructure estimation and tractography challenging. Implicit neural representations (INRs) can model the diffusion signal continuously, enabling native single-subject super-resolution by querying the network at arbitrary spatial coordinates, yet existing methods often suffer from long training times and lack a mechanism to incorporate anatomical priors to regularize super-resolution by constraining the space of plausible reconstructions. To address these limitations, we propose a novel transfer-learning framework that pre-trains an INR on a high-resolution template and then adapts it to subject-specific scans via registration and fine-tuning. For 4&times; through-plane super-resolution from 5 mm to 1.25 mm on Human Connectome Project (HCP) data, our method reduces NRMSE by 36&ndash;49% and increases FSIM by 24&ndash;43% over a recent baseline with 6&times; faster training, outperforming competing INR-based methods across both image quality and domain-specific metrics.</p>
         </section>
 
         <!-- Links Section -->
@@ -75,17 +161,14 @@
             <h2>Resources</h2>
             <ul>
                 <li><a href="https://arxiv.org/abs/2609.00981">Preprint (arXiv)</a></li>
-                <!-- <li><a href="#availability-notice">Supplementary Material</a></li> -->
-                <li><a href="#availability-notice">Code (GitHub)</a></li>
+                <li><a href="https://github.com/abdulkaderghandoura/prior-nodf">Code (GitHub)</a></li>
                 <li><a href="https://www.humanconnectome.org/study/hcp-young-adult/document/900-subjects-data-release">Dataset</a></li>
             </ul>
-            <p id="availability-notice" class="highlight-box">The code will be made public upon publication.</p>
         </section>
 
         <section>
             <h2>News</h2>
             <ul class="news-list">
-                <li><strong>[September 2026]</strong> Preprint released on <a href="https://arxiv.org/abs/2609.00981">arXiv</a>.</li>
                 <li><strong>[August 2026]</strong> Paper accepted at <a href="https://bmvc2026.bmva.org/">BMVC 2026</a> (Lancaster, UK).</li>
                 <li><strong>[January 2026]</strong> Poster presented at <a href="https://www.mena.ml/">MenaML 2026</a> (Thuwal, Saudi Arabia).</li>
             </ul>
@@ -164,7 +247,7 @@
             <h2>Quantitative Comparison</h2>
             <div class="figure">
                 <img src="assets/median_metrics_boxenplot.png" alt="Quantitative comparison table">
-                <p class="caption"><strong>Domain-specific metrics.</strong> Distribution of subject-wise median on 10 HCP subjects across three training checkpoints for ODF L2 norm error (proposed 0.08--0.09 vs. NODF baseline 0.11--0.23, HashEnc 0.12--0.13), GFA absolute error (0.023--0.026 vs. baseline/HashEnc 0.04--0.08), and eigenvector angular error (17--20&deg; vs. baseline 28--47&deg;, HashEnc 19--52&deg;).</p>
+                <p class="caption"><strong>Domain-specific metrics.</strong> Distribution of subject-wise median on 10 HCP subjects across three training checkpoints for ODF L2 norm error (proposed 0.08&ndash;0.09 vs. NODF baseline 0.11&ndash;0.23, HashEnc 0.12&ndash;0.13), GFA absolute error (0.023&ndash;0.026 vs. baseline/HashEnc 0.04&ndash;0.08), and eigenvector angular error (17&ndash;20&deg; vs. baseline 28&ndash;47&deg;, HashEnc 19&ndash;52&deg;).</p>
             </div>
             <div class="figure">
                 <img src="assets/fodf_peak_count.jpg" alt="fODF peak count comparison">
