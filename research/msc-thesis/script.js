@@ -5,6 +5,19 @@ if (!link.getAttribute('href').startsWith('#')) {
 }
 });
 
+// Copy button for the BibTeX block
+const copyBib = document.querySelector('.copy-bib');
+if (copyBib && navigator.clipboard) {
+    copyBib.hidden = false;
+    copyBib.addEventListener('click', () => {
+        const bib = document.querySelector('#citation code').textContent;
+        navigator.clipboard.writeText(bib).then(() => {
+            copyBib.textContent = 'Copied';
+            setTimeout(() => { copyBib.textContent = 'Copy'; }, 1500);
+        });
+    });
+}
+
 // document.addEventListener('DOMContentLoaded', function () {
 //     // Universal image zoom for all zoomable figures
 //     const zoomableImages = document.querySelectorAll('img.zoomable');

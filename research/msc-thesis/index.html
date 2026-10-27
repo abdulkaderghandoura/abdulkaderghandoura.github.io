@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="max-image-preview:large">
 
-    <!-- TODO (visibility):
-         - Link this page from the homepage (e.g., a 2026 timeline item)
-         - Link this page from the ORCID and LinkedIn/X -->
+    <!-- TODO (visibility): link this page from ORCID and LinkedIn/X -->
 
     <!-- Primary SEO tags -->
     <title>Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution</title>
     <meta name="description" content="A transfer-learning framework for neural fields that achieves 4&times; through-plane diffusion MRI super-resolution (5 mm to 1.25 mm) with 6&times; faster training.">
     <link rel="canonical" href="https://www.abdulkaderghandoura.com/research/msc-thesis/">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Icons (this page only): fODF glyph cropped from the pipeline figure -->
+    <link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
     <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
 
@@ -61,7 +65,7 @@
                 "mainEntity": { "@id": "https://www.abdulkaderghandoura.com/research/msc-thesis/#article" },
                 "primaryImageOfPage": { "@id": "https://www.abdulkaderghandoura.com/research/msc-thesis/#pipeline-image" },
                 "dateCreated": "2026-01-15T00:00:00+00:00",
-                "dateModified": "2026-10-26T00:00:00+00:00"
+                "dateModified": "2026-10-28T00:00:00+00:00"
             },
             {
                 "@type": "ImageObject",
@@ -169,8 +173,9 @@
         <section>
             <h2>News</h2>
             <ul class="news-list">
+                <li><strong>[November 2026]</strong> Poster presentation in <a href="https://bmvc2026.bmva.org/programme/wednesday/">Session 5</a> at BMVC 2026 (Lancaster, UK).</li>
                 <li><strong>[August 2026]</strong> Paper accepted at <a href="https://bmvc2026.bmva.org/">BMVC 2026</a> (Lancaster, UK).</li>
-                <li><strong>[January 2026]</strong> Poster presented at <a href="https://www.mena.ml/">MenaML 2026</a> (Thuwal, Saudi Arabia).</li>
+                <li><strong>[January 2026]</strong> Poster presented at <a href="https://cemse.kaust.edu.sa/articles/2026/01/26/kaust-collaboration-mcit-host-second-edition-mena-machine-learning-winter">MenaML 2026</a> (Thuwal, Saudi Arabia).</li>
             </ul>
         </section>
 
@@ -216,7 +221,7 @@
         <section class="figure-section">
             <h2>Method Overview</h2>
             <div class="figure">
-                <img src="assets/pipeline.png" alt="Overview of the proposed method">
+                <img src="assets/pipeline.png" alt="Diagram of the three-stage framework: pre-training on a high-resolution template, subject-template registration, and fine-tuning on low-resolution subject data">
                 <p class="caption"><strong>Framework overview.</strong> Three-stage framework: (1) Pre-training an INR on a high-resolution dMRI template. (2) Subject-template registration via a composite transformation <i>T</i>. (3) Fine-tuning to subject anatomy using low-resolution data.</p>
             </div>
         </section>
@@ -224,11 +229,11 @@
         <section class="figure-section">
             <h2>Registration and Convergence</h2>
             <div class="figure">
-                <img src="assets/axial_grid.jpg" alt="Registration results">
+                <img src="assets/axial_grid.jpg" alt="Deformed grid on an axial slice, with grid line colors showing the through-plane displacement">
                 <p class="caption"><strong>Through-plane displacement.</strong> Deformed grid of an axial slice after applying the displacement field. A regular 128&times;128 grid created in the fixed image space was transformed through <i>T</i>, resulting in curved grid lines that visualize the spatial deformation. Grid line colors encode the z-axis displacement of voxels, revealing the through-plane deformation pattern.</p> <!-- TODO (cmap label): Through-plane displacement -->
             </div>
             <div class="figure">
-                <img src="assets/loss_curves.jpg" alt="Convergence plot">
+                <img src="assets/loss_curves.jpg" alt="Training loss over epochs for the NODF baseline (blue) and the proposed method initialized from a prior (red)">
                 <p class="caption"><strong>Training convergence comparison.</strong> Training MSE (L2) loss over epochs comparing the NODF baseline (Consagra et al., 2024; blue; 3,000 epochs) with the proposed approach initialized from a prior (red; converges within 100 epochs).</p>
             </div>
         </section>
@@ -237,7 +242,7 @@
         <section class="figure-section">
             <h2>Qualitative Results</h2>
             <div class="figure">
-                <img src="assets/qualitative.jpg" alt="Qualitative comparison of methods">
+                <img src="assets/qualitative.jpg" alt="DTI, fODF and tractography reconstructions from the proposed method, two baselines and the ground truth">
                 <p class="caption"><strong>Reconstruction results and runtime.</strong> The figure shows DTI in sagittal view with zoomed cerebellar microstructure, fODFs in coronal view overlaid on GFA (with a yellow arrow indicating bundles), and tractography in axial view showing estimated streamlines for a missing slice from extremely anisotropic data. Red indicates left-right, green indicates anterior-posterior, and blue indicates superior-inferior direction. Our proposed method recovers fine details within 5 minutes, better matching the ground truth than both baselines, each trained for 1 hour.</p>
             </div>
         </section>
@@ -246,7 +251,7 @@
         <section class="figure-section">
             <h2>Quantitative Comparison</h2>
             <div class="figure">
-                <img src="assets/median_metrics_boxenplot.png" alt="Quantitative comparison table">
+                <img src="assets/median_metrics_boxenplot.png" alt="Boxen plots of subject-wise median ODF error, GFA error and eigenvector angular error for each method and training checkpoint">
                 <p class="caption"><strong>Domain-specific metrics.</strong> Distribution of subject-wise median on 10 HCP subjects across three training checkpoints for ODF L2 norm error (proposed 0.08&ndash;0.09 vs. NODF baseline 0.11&ndash;0.23, HashEnc 0.12&ndash;0.13), GFA absolute error (0.023&ndash;0.026 vs. baseline/HashEnc 0.04&ndash;0.08), and eigenvector angular error (17&ndash;20&deg; vs. baseline 28&ndash;47&deg;, HashEnc 19&ndash;52&deg;).</p>
             </div>
             <div class="figure">
@@ -291,7 +296,7 @@
         </section>
 
         <!-- Citation -->
-        <section>
+        <section id="citation">
             <h2>Citation</h2>
             <!-- <p class="citation-text">
                 First Author, Second Author, Third Author, Fourth Author. "Your Innovative Method Name: Descriptive Subtitle for Medical Image Analysis." <em>International Conference on Medical Image Computing and Computer Assisted Intervention (MICCAI)</em>, 2024.
@@ -306,11 +311,13 @@
   publisher = {BMVA},
   year      = {2026}
 }</code></pre>
+            <div class="bib-actions"><button type="button" class="copy-bib" hidden>Copy</button></div>
         </section>        
 
         <!-- Footer -->
         <footer>
-            <p>&copy; 2026 Psychiatry Neuroimaging Laboratory, Brigham and Women's Hospital, Harvard Medical School. All rights reserved.</p>
+            <p>This work was carried out at the Psychiatry Neuroimaging Laboratory, Brigham and Women's Hospital, Harvard Medical School, and formed the first author's M.Sc. thesis at the Technical University of Munich.</p>
+            <p>&copy; 2026 The Authors &middot; Code released under the <a href="https://github.com/abdulkaderghandoura/prior-nodf/blob/main/LICENSE">BSD 3-Clause License</a></p>
         </footer>
     </main>
 </body>

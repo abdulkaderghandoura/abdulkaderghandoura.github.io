@@ -284,6 +284,27 @@ code {
     color: #333;
 }
 
+.bib-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -5px;
+}
+
+.copy-bib {
+    font: inherit;
+    font-size: 0.85rem;
+    color: #1c1f23;
+    background: #fff;
+    border: 1px solid #868e96;
+    border-radius: 6px;
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+.copy-bib:hover {
+    background: #f4f5f7;
+}
+
 @media (max-width: 768px) {
     pre {
         padding: 1em;
@@ -403,6 +424,10 @@ footer {
     border-top: 1px solid #e0e0e0;
     color: #666;
     font-size: 0.9rem;
+}
+
+footer p {
+    text-align: center;
 }
 
 /* ============================================================
