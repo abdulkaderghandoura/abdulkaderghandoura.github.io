@@ -1,149 +1,142 @@
-/* Add this to your existing style.css or create a new style block */
-
-/* Reset some default styles */
-body, h1, h2, p {
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+/* Colour tokens. Light is the default; dark applies for "System" on a dark OS or an explicit "Dark" choice.
+   Every text colour meets WCAG 2.2 AA (4.5:1) in both themes. */
+:root {
+    color-scheme: light dark;
+    --bg: #ffffff;
+    --surface: #f4f5f7;
+    --text: #1c1f23;
+    --text-2: #5a6169;
+    --link: #1858a8;
+    --link-hover: #0f3f7d;
+    --border: #e1e4e8;
+    --border-strong: #868e96;
+    --focus: #1858a8;
+    --on-link: #ffffff;
+    --img-filter: none;
 }
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        --bg: #14171a;
+        --surface: #1d2125;
+        --text: #e4e7ea;
+        --text-2: #a2aab3;
+        --link: #8ab4f8;
+        --link-hover: #b3cefb;
+        --border: #2e343a;
+        --border-strong: #6f7882;
+        --focus: #8ab4f8;
+        --on-link: #14171a;
+        --img-filter: invert(1);
+    }
+}
+
+:root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #14171a;
+    --surface: #1d2125;
+    --text: #e4e7ea;
+    --text-2: #a2aab3;
+    --link: #8ab4f8;
+    --link-hover: #b3cefb;
+    --border: #2e343a;
+    --border-strong: #6f7882;
+    --focus: #8ab4f8;
+    --on-link: #14171a;
+    --img-filter: invert(1);
+}
+
+:root[data-theme="light"] { color-scheme: light; }
+
+/* Base */
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html:not(.js) .js-only { display: none; }
 
 body {
-    font-family: Arial, sans-serif; /* Set the font family for the entire page */
-    line-height: 1.6; /* Set the line height to improve readability */
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font: 1rem/1.65 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 
-header {
-    text-align: center; /* Center align the content within the header */
-    padding: 20px; /* Add padding around the header content */
-    background-color: #f2f2f2; /* Set the background color for the header */
-}
+.wrap { max-width: 40rem; margin: 0 auto; padding: 48px 16px 40px; }
 
-img { max-width: 100%; height: auto; }
+a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: .15em; }
+a:hover { color: var(--link-hover); text-decoration-thickness: 2px; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; border-radius: 2px; }
 
-header img {
-    width: 150px; /* Set a fixed width for the header image */
-    border-radius: 50%; /* Apply a circular border to the header image */
-}
+.skip { position: absolute; left: -999px; }
+.skip:focus { left: 16px; top: 8px; background: var(--bg); padding: 4px 8px; }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
 
-header h1 {
-    margin-top: 10px;
-    font-size: 2rem; /* Base size for desktop */
-    line-height: 1.3;
-    font-weight: 600;
-}
+h2 { font-size: .8rem; letter-spacing: .09em; text-transform: uppercase; color: var(--text-2); font-weight: 650; margin: 44px 0 12px; }
+p { margin: 0 0 12px; }
 
-/* Responsive breakpoints following Bootstrap/industry standards */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 1.5rem; /* Tablet */
-    }
-}
+/* Buttons */
+button { font: inherit; cursor: pointer; }
+.linkish { color: var(--link); background: none; border: 0; padding: 0; }
+.linkish:hover { color: var(--link-hover); text-decoration: underline; text-underline-offset: .15em; }
+.caret { width: .6em; height: .6em; margin-left: .3em; vertical-align: .05em; transition: transform .15s; }
+[aria-expanded="true"] > .caret { transform: rotate(180deg); }
+.btn-small { font-size: .85rem; line-height: 1.4; color: var(--text); background: var(--bg); border: 1px solid var(--border-strong); border-radius: 6px; padding: 3px 10px; }
+.btn-small:hover { background: var(--surface); }
+.btn-outline { display: block; margin: 10px auto 0; font-size: .95rem; color: var(--text); background: transparent; border: 1px solid var(--border-strong); border-radius: 999px; padding: 6px 20px; }
+.btn-outline:hover { background: var(--surface); }
+@media (prefers-reduced-motion: reduce) { .caret { transition: none; } }
 
-@media (max-width: 576px) {
-    header h1 {
-        font-size: 1.25rem; /* Mobile */
-    }
-}
+/* Header */
+header { text-align: center; margin-bottom: 44px; }
+.portrait { display: block; margin: 0 auto; width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
+/* The iD icon scales with the name (0.74em matches the measured cap height) and sits on its baseline,
+   so it spans the capital letters at every screen size (20-26px, within ORCID's size range). */
+.name-row { margin: 18px 0 10px; font-size: clamp(1.7rem, 1.3rem + 1.4vw, 2.2rem); line-height: 1.2; }
+h1 { display: inline; font-size: 1em; font-weight: 650; }
+.orcid { display: inline-block; margin-left: .3em; vertical-align: baseline; border-radius: 50%; }
+.orcid img { display: block; width: .74em; height: .74em; }
+.meta { margin: 0; color: var(--text-2); line-height: 1.5; }
+.meta + .meta { margin-top: 6px; }
+.links-row { list-style: none; padding: 0; margin: 26px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 0; }
+.links-row li:not(:last-child)::after { content: "·"; color: var(--text-2); margin: 0 8px; }
+.links-row a { text-decoration: none; }
+.links-row a:hover { text-decoration: underline; }
+.email-panel { margin-top: 14px; }
+.email-box { display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 12px; max-width: 100%; padding: 8px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
+.email-img { display: block; max-width: 100%; height: auto; filter: var(--img-filter); }
 
-@media (max-width: 360px) {
-    header h1 {
-        font-size: 1.1rem; /* Small mobile */
-    }
-}
+/* Publications and Software & data */
+.entries { list-style: none; padding: 0; margin: 0; }
+.entries > li { margin: 0 0 20px; }
+.entries .line { display: block; }
+.entries .title { font-weight: 600; }
+.entries .by, .entries .venue { color: var(--text-2); }
+.note { color: var(--text-2); font-size: .9rem; }
+.bib { margin-top: 10px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
+html.js .bib:not(.open) { display: none; }
+.bib pre { margin: 0; padding: 12px 14px 4px; white-space: pre-wrap; overflow-wrap: anywhere; font: .8rem/1.55 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: var(--text); }
+.bib .actions { display: flex; justify-content: flex-end; padding: 0 8px 8px; }
 
-main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 800px; /* Set the maximum width for the main content */
-    margin: 0 auto; /* Center align the main content using auto margins */
-    padding: 20px; /* Add padding around the main content */
-}
+/* News */
+.news { list-style: none; padding: 0; margin: 0; }
+.news li { display: grid; grid-template-columns: 5.5em 1fr; column-gap: 1rem; padding: 0 0 10px; }
+html.js .news:not(.expanded) .older { display: none; }
+.news time { color: var(--text-2); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.news p { margin: 0; }
+@media (max-width: 22.5em) { .news li { grid-template-columns: 1fr; } }
 
-main p {
-	color: #333;
-}
+/* Footer and theme switch */
+footer { margin-top: 48px; padding-top: 18px; border-top: 1px solid var(--border); color: var(--text-2); font-size: .9rem; text-align: center; }
+footer p { margin: 0 0 14px; }
+.theme { display: inline-flex; align-items: center; gap: 10px; }
+.seg { display: inline-flex; border: 1px solid var(--border-strong); border-radius: 999px; padding: 2px; }
+.seg label { position: relative; }
+.seg input { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
+.seg span { display: block; padding: 1px 12px; border-radius: 999px; }
+.seg label:hover span { color: var(--text); }
+.seg input:checked + span { background: var(--link); color: var(--on-link); }
+.seg input:focus-visible + span { outline: 2px solid var(--focus); outline-offset: 2px; }
 
-main section {
-    text-align: justify; /* Justify the text within sections for better alignment */
-    width: 100%;
-    display: none;
-    padding: 20px;
-}
-
-.contact-links {
-    list-style: none; /* Remove default list styles */
-    padding: 0; /* Remove default padding */
-    margin-top: 10px; /* Add some top margin to the social media links container */
-    text-align: center; /* Center align the social media links */
-}
-
-.contact-links li {
-    display: inline; /* Display list items inline to put them on the same line */
-    margin: 0 10px; /* Add left and right margin to separate the social media links */
-}
-
-.contact-links a {
-    text-decoration: none; /* Remove underline from the social media links */
-    font-size: 16px; /* Set the font size of the social media links */
-}
-
-.contact-links a:hover {
-    text-decoration: underline; /* Add underline on hover for better visibility */
-}
-
-.summary-links a {
-    text-decoration: none; /* Remove underline from the social media links */
-}
-
-.summary-links a:hover {
-    text-decoration: underline; /* Add underline on hover for better visibility */
-}
-
-.publications-and-datasets-links {
-    padding: 0;
-    margin: 0 0 0 20px;
-    text-align: justify;
-}
-
-.publications-and-datasets-links a {
-    text-decoration: none;
-}
-
-.publications-and-datasets-links a:hover {
-    text-decoration: underline;
-}
-
-.tabs {
-    display: flex;
-    width: 100%;    
-}
-
-.tab {
-    flex: 1;
-    padding: 10px;
-    text-align: center;
-    background-color: #f2f2f2;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    box-sizing: border-box; /* Ensure padding is included in the width */
-}
-
-.tab.active {
-    font-weight: bold; /* Make the active tab bold */
-    background-color: #ddd; /* Change background color of the active tab */
-    border: none;
-}
-
-/* CSS to hide visually but still accessible to screen readers */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    padding: 0;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-/* .tabs, #publications, #datasets { display: none; } */
+/* Privacy page */
+.page-title { font-size: 1.6rem; line-height: 1.25; margin: 0 0 6px; font-weight: 650; }
+.back { display: inline-block; margin-bottom: 28px; }
+.updated { color: var(--text-2); font-size: .9rem; }

@@ -3,20 +3,37 @@
 
 	<head>
 		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">	
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="color-scheme" content="light dark">
 		<meta name="robots" content="max-image-preview:large">
+
+		<!-- Theme: apply a saved choice before the first paint; no saved choice follows the system setting -->
+		<script>
+			(function () {
+				var root = document.documentElement;
+				root.classList.add('js');
+				try {
+					var t = localStorage.getItem('theme');
+					if (t === 'light' || t === 'dark') root.dataset.theme = t;
+				} catch (e) {}
+			})();
+		</script>
 
 		<!-- Primary SEO tags -->
 		<title>Abdulkader Ghandoura</title>
-		<meta name="description" 
-			  content="Abdulkader Ghandoura is a master's student in Data Engineering and Analytics at the Technical University of Munich (TUM), with a research focus on artificial intelligence in medicine.">
+		<meta name="description"
+			  content="Abdulkader Ghandoura works on machine learning for medical imaging, with a focus on inverse problems and learning from limited or degraded data.">
 		<link rel="canonical" href="https://www.abdulkaderghandoura.com/">
-		<link rel="stylesheet" href="style.css" media="all">
-		
+		<link rel="stylesheet" href="style.css">
+
+		<!-- Icons -->
+		<link rel="icon" href="assets/images/favicon/favicon.ico">
+		<link rel="apple-touch-icon" href="assets/images/favicon/apple-touch-icon.png">
+
 		<!-- Identity links -->
 		<link rel="me" href="https://www.wikidata.org/wiki/Q134437494">
 		<link rel="me" href="https://orcid.org/0000-0001-6514-3983">
-		
+
 		<!-- Other Profile Links -->
 		<link rel="me" href="https://www.xing.com/profile/Abdulkader_Ghandoura025656">
 		<link rel="me" href="https://independent.academia.edu/abdulkaderghan">
@@ -31,10 +48,10 @@
 		<meta property="og:locale" content="en_US">
 		<meta property="og:type" content="profile">
 		<meta property="og:title" content="Abdulkader Ghandoura">
-		<meta property="og:description" content="Research Intern at Harvard · Student Researcher at Helmholtz AI · Master's Student at TUM · Academic Mentor at SYE NGO">	
+		<meta property="og:description" content="Abdulkader Ghandoura works on machine learning for medical imaging, with a focus on inverse problems and learning from limited or degraded data.">
 		<meta property="og:url" content="https://www.abdulkaderghandoura.com/">
 		<meta property="og:site_name" content="Abdulkader Ghandoura">
-		
+
 		<!-- Open Graph: profile-specific -->
 		<meta property="profile:first_name" content="Abdulkader">
 		<meta property="profile:last_name" content="Ghandoura">
@@ -61,33 +78,18 @@
 		<!-- Twitter Card -->
 		<meta name="twitter:card"        content="summary_large_image">
 		<meta name="twitter:title"       content="Abdulkader Ghandoura">
-		<meta name="twitter:description" content="Master's student at the Technical University of Munich (TUM), focusing on artificial intelligence applications in the medical domain.">
+		<meta name="twitter:description" content="Abdulkader Ghandoura works on machine learning for medical imaging, with a focus on inverse problems and learning from limited or degraded data.">
 		<meta name="twitter:image"       content="https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_16x9.jpg">
-		<meta name="twitter:image:alt" 	 content="Portrait of Abdulkader Ghandoura">
+		<meta name="twitter:image:alt"   content="Portrait of Abdulkader Ghandoura">
 		<meta name="twitter:site"        content="@abdulkaderghan">
 		<meta name="twitter:creator"     content="@abdulkaderghan">
 
-		<!-- Google tag (gtag.js) -->
+		<!-- Google Analytics 4 -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-KCD21Z4217"></script>
-		<noscript>
-		  <img src="https://www.googletagmanager.com/ns.html?id=G-KCD21Z4217"
-			   alt="Google Analytics Tracking Pixel" style="display:none;">
-		</noscript>
 
 		<!-- Site JS -->
 		<script src="script.js" defer></script>
-		
-		<!-- 
-			TO be added later:
-			"alumniOf": { "@id": "#org-tum" },
 
-			"hasCredential": {
-				"@type": "EducationalOccupationalCredential",
-				"name": "M.Sc. Data Engineering and Analytics",
-				"credentialCategory": "Master’s degree"
-			}
-		-->
-		
 		<!-- JSON-LD (schema.org) -->
 		<script type="application/ld+json">
 		{
@@ -108,16 +110,16 @@
 					"inLanguage": "en",
 					"isPartOf": { "@id": "https://www.abdulkaderghandoura.com/#website" },
 					"mainEntity": { "@id": "https://www.abdulkaderghandoura.com/#person" },
-					"primaryImageOfPage": { "@id": "https://www.abdulkaderghandoura.com/#hero-image" },				
+					"primaryImageOfPage": { "@id": "https://www.abdulkaderghandoura.com/#hero-image" },
 					"dateCreated": "2023-09-06T00:00:00+00:00",
-					"dateModified": "2025-08-21T00:00:00+00:00"
-				},				
+					"dateModified": "2026-10-28T00:00:00+00:00"
+				},
 				{
 					"@type": "ImageObject",
 					"@id": "https://www.abdulkaderghandoura.com/#hero-image",
 					"url": "https://commons.wikimedia.org/wiki/File:Abdulkader_Ghandoura_Harvard_2025.jpg",
 					"contentUrl": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Abdulkader_Ghandoura_Harvard_2025.jpg",
-					"thumbnailUrl": "https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-harvard-2025_1x1.jpg",
+					"thumbnailUrl": "https://www.abdulkaderghandoura.com/assets/images/me/Abdulkader_Ghandoura_Harvard_2025_1x1.jpg",
 					"caption": "Portrait of Abdulkader Ghandoura at Harvard (2025)",
 					"license": "https://creativecommons.org/licenses/by-sa/4.0/",
 					"creator": { "@type": "Person", "name": "Abdulkader Ghandoura" },
@@ -125,7 +127,7 @@
 					"copyrightNotice": "© Abdulkader Ghandoura (CC BY-SA 4.0)",
 					"acquireLicensePage": "https://commons.wikimedia.org/wiki/File:Abdulkader_Ghandoura_Harvard_2025.jpg",
 					"width":  { "@type": "QuantitativeValue", "value": 2425, "unitCode": "E37" },
-					"height": { "@type": "QuantitativeValue", "value": 3233, "unitCode": "E37" },				
+					"height": { "@type": "QuantitativeValue", "value": 3233, "unitCode": "E37" },
 					"dateCreated": "2025-03-18T00:00:00+00:00",
 					"dateModified": "2025-08-08T00:00:00+00:00"
 				},
@@ -158,20 +160,6 @@
 					"sameAs": "https://www.wikidata.org/wiki/Q157808"
 				},
 				{
-					"@type": "CollegeOrUniversity",
-					"@id": "https://www.abdulkaderghandoura.com/#org-harvard",
-					"name": "Harvard University",
-					"url": "https://www.harvard.edu/",
-					"sameAs": "https://www.wikidata.org/wiki/Q13371"
-				},
-				{
-					"@type": "ResearchOrganization",
-					"@id": "https://www.abdulkaderghandoura.com/#org-helmholtz-munich",
-					"name": "Helmholtz Zentrum München",
-					"url": "https://www.helmholtz-munich.de/",
-					"sameAs": "https://www.wikidata.org/wiki/Q878592"
-				},
-				{
 					"@type": "Organization",
 					"@id": "https://www.abdulkaderghandoura.com/#org-sye",
 					"name": "SYE Initiative",
@@ -188,7 +176,7 @@
 						"@language": "ar"
 					},
 					"jobTitle": "Researcher",
-					"birthDate": "1997-01-03",
+					"birthDate": "1997",
 					"birthPlace": {
 						"@type": "Place",
 						"name": "Idlib",
@@ -200,18 +188,18 @@
 					"nationality": {
 						"@type": "Country",
 						"name": "Syria"
-					},				  
+					},
 					"url": "https://www.abdulkaderghandoura.com/",
 					"mainEntityOfPage": { "@id": "https://www.abdulkaderghandoura.com/#webpage" },
-			
+
 					"identifier": {
 						"@type": "PropertyValue",
 						"propertyID": "Wikidata",
 						"value": "Q134437494"
 					},
 
-					"description": "Abdulkader Ghandoura is a master's student in Data Engineering and Analytics at the Technical University of Munich, with a research focus on Artificial Intelligence in Medicine.",
-					
+					"description": "Abdulkader Ghandoura works on machine learning for medical imaging, with a focus on inverse problems and learning from limited or degraded data.",
+
 					"image": [
 						{ "@id": "https://www.abdulkaderghandoura.com/#hero-image" },
 						{ "@id": "https://www.abdulkaderghandoura.com/#img-1x1" },
@@ -219,14 +207,8 @@
 						{ "@id": "https://www.abdulkaderghandoura.com/#img-16x9" }
 					],
 
-					"affiliation": [
-						{ "@id": "https://www.abdulkaderghandoura.com/#org-tum" },
-						{ "@id": "https://www.abdulkaderghandoura.com/#org-harvard" },
-						{ "@id": "https://www.abdulkaderghandoura.com/#org-helmholtz-munich" }
-					],
-
 					"alumniOf": { "@id": "https://www.abdulkaderghandoura.com/#org-tum" },
-    
+
 					"hasCredential": {
 						"@type": "EducationalOccupationalCredential",
 						"name": "M.Sc. Data Engineering and Analytics",
@@ -234,7 +216,7 @@
 					},
 
 					"memberOf": { "@id": "https://www.abdulkaderghandoura.com/#org-sye" },
-					
+
 					"knowsLanguage": ["ar","en","de"],
 
 					"knowsAbout": [
@@ -244,11 +226,6 @@
 						"Diffusion MRI"
 					],
 
-					"subjectOf": [
-						{ "@id": "https://www.abdulkaderghandoura.com/#paper-asc" },
-						{ "@id": "https://www.abdulkaderghandoura.com/#dataset-asc" }
-					],
-		
 					"sameAs": [
 						"https://www.wikidata.org/wiki/Q134437494",
 						"https://orcid.org/0000-0001-6514-3983",
@@ -268,10 +245,22 @@
 						"https://gitlab.com/abdulkaderghandoura"
 					]
 				},
-
 				{
 					"@type": "ScholarlyArticle",
-					"@id": "https://www.abdulkaderghandoura.com/#paper-asc",					
+					"@id": "https://www.abdulkaderghandoura.com/research/msc-thesis/#article",
+					"headline": "Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution",
+					"url": "https://www.abdulkaderghandoura.com/research/msc-thesis/",
+					"sameAs": "https://arxiv.org/abs/2609.00981",
+					"author": [
+						{ "@id": "https://www.abdulkaderghandoura.com/#person" },
+						{ "@type": "Person", "name": "Marsil Zakour" },
+						{ "@type": "Person", "name": "William Consagra" },
+						{ "@type": "Person", "name": "Yogesh Rathi" }
+					]
+				},
+				{
+					"@type": "ScholarlyArticle",
+					"@id": "https://www.abdulkaderghandoura.com/#paper-asc",
 					"identifier": {
 						"@type": "PropertyValue",
 						"propertyID": "DOI",
@@ -281,10 +270,10 @@
 					"sameAs": "https://doi.org/10.1016/j.engappai.2021.104267",
 					"headline": "Building and benchmarking an Arabic Speech Commands dataset for small-footprint keyword spotting",
 					"author": [
-					  { "@id": "https://www.abdulkaderghandoura.com/#person" },
-					  { "@type": "Person", "name": "Farouk Hjabo" },
-					  { "@type": "Person", "name": "Oumayma Al Dakkak" }
-					]										
+						{ "@id": "https://www.abdulkaderghandoura.com/#person" },
+						{ "@type": "Person", "name": "Farouk Hjabo" },
+						{ "@type": "Person", "name": "Oumayma Al Dakkak" }
+					]
 				},
 				{
 					"@type": "Dataset",
@@ -294,132 +283,144 @@
 						"propertyID": "DOI",
 						"value": "10.5281/zenodo.4662481",
 						"url": "https://doi.org/10.5281/zenodo.4662481"
-					},					
+					},
 					"name": "Arabic Speech Commands Dataset",
 					"description": "12,000 one-second clips at 16 kHz covering 40 Arabic keywords (30 speakers x 10 utterances) plus background noise. CC BY 4.0.",
 					"url": "https://doi.org/10.5281/zenodo.4662481",
-					"creator": [
-						{ "@id": "https://www.abdulkaderghandoura.com/#person" },
-						{ "@type": "Person", "name": "Farouk Hjabo" },
-						{ "@type": "Person", "name": "Oumayma Al Dakkak" }
-					],
-					"license": "https://creativecommons.org/licenses/by/4.0/"					
-				}				
+					"creator": { "@id": "https://www.abdulkaderghandoura.com/#person" },
+					"license": "https://creativecommons.org/licenses/by/4.0/"
+				}
 			]
 		}
 		</script>
 	</head>
 
 	<body>
-		<header>
-			<!-- Your photo -->
-			<img src="https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_1x1.jpg" 
-				 width="867" height="867" loading="eager" alt="Portrait of Abdulkader Ghandoura">
-
-			<!-- Your name -->
-			<h1>
-				Abdulkader Ghandoura
-				<a
-					id="cy-effective-orcid-url"
-					class="underline"
-					href="https://orcid.org/0000-0001-6514-3983"
-					target="orcid.widget"
-					rel="me noopener noreferrer"
-					style="vertical-align: top">
-					<img
-						src="https://orcid.org/sites/default/files/images/orcid_16x16.png"
-						style="height: 0.7em; width: auto; margin-left: 0.1em; vertical-align: baseline;"
-						alt="ORCID iD icon"/>
-				</a>					
-			</h1>
-			<p class="location">Munich, Bavaria, Germany</p>
-			
-			<section id="Profiles">
-				<ul class="contact-links">
-					<li>
-						<a href="https://scholar.google.com/citations?user=T5MMLHwAAAAJ" rel="me">
-							Google Scholar
-						</a>
-						<!-- <span class="visually-hidden">عبد القادر غندورة</span> -->
-					</li>
-					<li>
-						<a href="https://www.linkedin.com/in/abdulkaderghandoura" rel="me">
-							LinkedIn
-						</a>
-						<!-- <span class="visually-hidden">عبد القادر غندورة</span> -->
-					</li>
-					<li>
-						<a href="https://github.com/abdulkaderghandoura/" rel="me">
-							GitHub
-						</a>
-						<!-- <span class="visually-hidden">عبد القادر غندورة</span> -->
-					</li>
-					<li>
-						<a href="https://www.facebook.com/ghandoura.abdulkader" rel="me">
-							Facebook
-						</a>
-						<!-- <span class="visually-hidden">عبد القادر غندورة</span> -->
-					</li>
-					<li>
-						<a href="https://www.instagram.com/abdulkader.ghandoura" rel="me">
-							Instagram
-						</a>
-						<!-- <span class="visually-hidden">عبد القادر غندورة</span> -->
-					</li>
-					<!-- <li>
-						<a href="https://www.youtube.com/@abdulkaderghandoura" rel="me">
-							YouTube
-						</a>
-						<span class="visually-hidden">عبد القادر غندورة</span>
-					</li> -->
-					<li>
-						<a href="https://x.com/abdulkaderghan" rel="me">
-							X (Twitter)
-						</a>
-						<!-- <span class="visually-hidden">عبد القادر غندورة</span> -->
-					</li>
+		<a class="skip" href="#main">Skip to main content</a>
+		<div class="wrap">
+			<header>
+				<img class="portrait"
+					 src="assets/images/me/abdulkader-ghandoura-18032025_1x1-300.jpg"
+					 srcset="assets/images/me/abdulkader-ghandoura-18032025_1x1-300.jpg 300w, assets/images/me/abdulkader-ghandoura-18032025_1x1.jpg 867w"
+					 sizes="150px" width="150" height="150" alt="Portrait of Abdulkader Ghandoura">
+				<!-- The word joiner (&#8288;) keeps the iD icon on the same line as the last word of the name -->
+				<div class="name-row"><h1>Abdulkader Ghandoura</h1>&#8288;<a class="orcid" href="https://orcid.org/0000-0001-6514-3983" rel="me" title="ORCID record"><img src="assets/images/icons/orcid-id.svg" width="24" height="24" alt="ORCID iD"></a></div>
+				<p class="meta">Medical Image Computing · Signal Processing · Inverse Problems</p>
+				<p class="meta">Munich, Germany</p>
+				<ul class="links-row">
+					<li class="js-only"><button type="button" class="linkish email-toggle" aria-expanded="false" aria-controls="email-panel">Email<svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></li>
+					<li><a href="https://scholar.google.com/citations?user=T5MMLHwAAAAJ" rel="me">Google Scholar</a></li>
+					<li><a href="https://github.com/abdulkaderghandoura" rel="me">GitHub</a></li>
+					<li><a href="https://www.linkedin.com/in/abdulkaderghandoura" rel="me">LinkedIn</a></li>
+					<li><a href="https://x.com/abdulkaderghan" rel="me">X</a></li>
+					<li><a href="https://www.facebook.com/ghandoura.abdulkader" rel="me">Facebook</a></li>
+					<li><a href="https://www.instagram.com/abdulkader.ghandoura" rel="me">Instagram</a></li>
 				</ul>
-			</section>
-		</header>
+				<!-- The address is stored ROT13-scrambled and assembled by script.js after a click -->
+				<div id="email-panel" class="email-panel" data-e="noqhyxnqre.tunaqbhen|ghz.qr" hidden></div>
+				<noscript><div class="email-panel"><span class="email-box"><img class="email-img" src="assets/images/icons/email.png" width="316" height="24" alt="Email address (image)"></span></div></noscript>
+			</header>
 
-		<main>
-			<div class="tabs">
-				<div class="tab active" data-section="summary" onclick="showSection('summary')">Summary</div>
-				<!-- <div class="tab" data-section="news" onclick="showSection('news')">News</div> -->
-				<div class="tab" data-section="publications" onclick="showSection('publications')">Publications</div>
-				<div class="tab" data-section="datasets" onclick="showSection('datasets')">Datasets</div>
-			</div>			
+			<main id="main">
+				<section aria-labelledby="about">
+					<h2 id="about">About</h2>
+					<p>My research in machine learning for medical imaging focuses on inverse problems and learning from limited or degraded data. I completed my M.Sc. in Data Engineering and Analytics at the Technical University of Munich (TUM) and carried out my thesis research as a <a href="https://pnl.bwh.harvard.edu/index.php/abdulkader-ghandoura/">visiting graduate student</a> at the Psychiatry Neuroimaging Laboratory, Brigham and Women's Hospital, Harvard Medical School. I am currently looking for research positions in academia or industry. Feel free to reach out.</p>
+				</section>
 
-			<section id="summary">
-				<h2 class="visually-hidden">Summary</h2>
-				<p class="summary-links">
-					I am a master's student in Data Engineering and Analytics at the Technical University of Munich and a <a href="https://pnl.bwh.harvard.edu/index.php/abdulkader-ghandoura/">research intern</a> at Harvard Medical School, where I am writing my thesis on estimating neural orientation distribution fields for diffusion MRI reconstruction. I also work part-time as a student researcher at the Helmholtz AI Central Unit in Munich, where we are developing a tool to detect and classify organoids in microscopy images. My research focuses on signal and image processing for inverse problems in medical imaging, at the intersection of machine learning and biomedical imaging. Back in Syria, I completed a five-year bachelor's degree in Information Systems Engineering, graduating at the top of my cohort in the Intelligent Systems specialization. As a volunteer, I serve on the graduate leadership team of the Syrian Youth Empowerment Initiative, a nonprofit that helps Syrian students apply to prestigious universities and scholarship programs worldwide.
-				</p>
-			</section>
-			
-			<!-- <section id="news">
-				<h2 class="visually-hidden">News</h2>
-				<div class='sk-ww-linkedin-profile-post' data-embed-id='2534554'></div>
-			</section> -->
-	
-			<section id="publications">
-				<h2 class="visually-hidden">Publications</h2>
-				<ul class="publications-and-datasets-links">
-					<li>
-						Ghandoura, Abdulkader, Farouk Hjabo, and Oumayma Al Dakkak. &ldquo;<a href="https://doi.org/10.1016/j.engappai.2021.104267">Building and benchmarking an Arabic Speech Commands dataset for small-footprint keyword spotting.</a>&rdquo; Engineering Applications of Artificial Intelligence 102 (2021): 104267.
-					</li>
-				</ul>
-			</section>
+				<section aria-labelledby="pubs">
+					<h2 id="pubs">Publications</h2>
+					<ol class="entries">
+						<li>
+							<span class="line"><a class="title" href="research/msc-thesis/">Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution</a></span>
+							<span class="line by"><strong>Abdulkader Ghandoura</strong>, Marsil Zakour, William Consagra<sup>‡</sup>, Yogesh Rathi<sup>‡</sup></span>
+							<span class="line venue">British Machine Vision Conference (BMVC), 2026</span>
+							<span class="line"><a href="research/msc-thesis/">Project page</a> · <a href="https://arxiv.org/abs/2609.00981">arXiv</a> · <a href="https://github.com/abdulkaderghandoura/prior-nodf">Code</a><span class="js-only"> · <button type="button" class="linkish bib-toggle" aria-expanded="false" aria-controls="bib-bmvc">BibTeX<svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></span></span>
+							<div class="bib" id="bib-bmvc">
+<!-- Keep the BibTeX lines flush-left: whitespace inside <pre> is displayed as-is -->
+<pre><code>@inproceedings{Ghandoura_2026_BMVC,
+  author    = {Abdulkader Ghandoura and Marsil Zakour and William Consagra and Yogesh Rathi},
+  title     = {Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution},
+  booktitle = {37th British Machine Vision Conference 2026, {BMVC} 2026, Lancaster, UK, November 23-26, 2026},
+  publisher = {BMVA},
+  year      = {2026}
+}</code></pre>
+								<div class="actions js-only"><button type="button" class="btn-small copy">Copy</button></div>
+							</div>
+						</li>
+						<li>
+							<span class="line"><a class="title" href="https://doi.org/10.1016/j.engappai.2021.104267">Building and benchmarking an Arabic Speech Commands dataset for small-footprint keyword spotting</a></span>
+							<span class="line by"><strong>Abdulkader Ghandoura</strong>, Farouk Hjabo, Oumayma Al Dakkak</span>
+							<span class="line venue"><i>Engineering Applications of Artificial Intelligence</i> 102, 104267, 2021</span>
+							<span class="line"><a href="https://doi.org/10.1016/j.engappai.2021.104267">Paper</a> · <a href="https://doi.org/10.5281/zenodo.4662481">Dataset</a><span class="js-only"> · <button type="button" class="linkish bib-toggle" aria-expanded="false" aria-controls="bib-eaai">BibTeX<svg class="caret" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button></span></span>
+							<div class="bib" id="bib-eaai">
+<pre><code>@article{ghandoura2021building,
+  title={Building and benchmarking an Arabic Speech Commands dataset for small-footprint keyword spotting},
+  author={Ghandoura, Abdulkader and Hjabo, Farouk and Al Dakkak, Oumayma},
+  journal={Engineering Applications of Artificial Intelligence},
+  volume={102},
+  pages={104267},
+  year={2021},
+  publisher={Elsevier},
+  doi={10.1016/j.engappai.2021.104267}
+}</code></pre>
+								<div class="actions js-only"><button type="button" class="btn-small copy">Copy</button></div>
+							</div>
+						</li>
+					</ol>
+					<p class="note">‡ Shared senior authorship.</p>
+				</section>
 
-			<section id="datasets">
-				<h2 class="visually-hidden">Datasets</h2>
-				<ul class="publications-and-datasets-links">
-					<li>
-						<a href="https://doi.org/10.5281/zenodo.4662481">Arabic Speech Commands Dataset (CC BY 4.0):</a> Our dataset is a list of pairs (x, y), where x is the input speech signal, and y is the corresponding keyword. The final dataset consists of 12000 such pairs, comprising 40 keywords. Each audio file is one-second in length sampled at 16 kHz. We have 30 participants, each of them recorded 10 utterances for each keyword. Therefore, we have 300 audio files for each keyword in total (30 * 10 * 40 = 12000), and the total size of all the recorded keywords is ~384 MB. The dataset also contains several background noise recordings we obtained from various natural sources of noise. We saved these audio files in a separate folder with the name background_noise and a total size of ~49 MB.
-					</li>
-				</ul>
-			</section>
+				<section aria-labelledby="news">
+					<h2 id="news">News</h2>
+					<ul class="news" id="news-list">
+						<li><time datetime="2026-11">Nov 2026</time><p>Presenting our poster in <a href="https://bmvc2026.bmva.org/programme/wednesday/">Session 5</a> at BMVC 2026 in Lancaster, UK.</p></li>
+						<li><time datetime="2026-08">Aug 2026</time><p>Our paper “<a href="research/msc-thesis/">Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution</a>” was accepted at BMVC 2026.</p></li>
+						<li><time datetime="2026-06">Jun 2026</time><p>Joined a <a href="https://www.linkedin.com/company/apellai/">stealth AI startup</a> in Boston (remote) as a machine learning research intern, working on early lung-cancer risk prediction.</p></li>
+						<li><time datetime="2026-01">Jan 2026</time><p>Presented a poster on my M.Sc. thesis at the <a href="https://cemse.kaust.edu.sa/articles/2026/01/26/kaust-collaboration-mcit-host-second-edition-mena-machine-learning-winter">MenaML Winter School 2026</a> at KAUST, Saudi Arabia.</p></li>
+						<li><time datetime="2025-09">Sep 2025</time><p>Presented a poster on early autism screening from children's eye movements at the <a href="https://www.m2lschool.org/past-editions/m2l-2025-croatia">Mediterranean Machine Learning (M2L) Summer School 2025</a> in Split, Croatia.</p></li>
+						<li class="older"><time datetime="2025-06">Jun 2025</time><p>Joined the <a href="https://www.helmholtz.ai/applied-ai/ai-consultancy-teams/piraud-team/">AI Consultant Team for Health</a> at Helmholtz Munich as a student researcher, working on automated organoid detection and classification in microscopy images.</p></li>
+						<li class="older"><time datetime="2024-10">Oct 2024</time><p>Joined the <a href="https://pnl.bwh.harvard.edu/">Psychiatry Neuroimaging Laboratory</a> at Brigham and Women's Hospital, Harvard Medical School, as a visiting graduate student for my M.Sc. thesis with Prof. Yogesh Rathi.</p></li>
+						<li class="older"><time datetime="2024-07">Jul 2024</time><p>Attended the <a href="https://www.ellis.eng.cam.ac.uk/summer-school-2024/">Cambridge Ellis Unit Summer School on Probabilistic Machine Learning</a> at the University of Cambridge, UK.</p></li>
+						<li class="older"><time datetime="2024-04">Apr 2024</time><p>Joined the <a href="https://www.cs.cit.tum.de/camp/start/">Chair for Computer Aided Medical Procedures &amp; Augmented Reality</a> at TUM (Prof. Nassir Navab) as a student researcher, adapting an implicit 4D myocardium model to 3D echocardiography.</p></li>
+						<li class="older"><time datetime="2023-10">Oct 2023</time><p>Joined the <a href="https://www.collaborative-ai.org/">Collaborative Artificial Intelligence group</a> at the University of Stuttgart (Prof. Andreas Bulling) as a student researcher, working on early autism screening from children's eye movements.</p></li>
+						<li class="older"><time datetime="2023-04">Apr 2023</time><p>Joined the <a href="https://aim-lab.io/">Chair of AI in Healthcare and Medicine</a> at TUM University Hospital rechts der Isar (Prof. Daniel Rückert) as a student researcher, working on <a href="https://github.com/abdulkaderghandoura/brain-age">brain age prediction from EEG signals</a>.</p></li>
+						<li class="older"><time datetime="2022-10">Oct 2022</time><p>Started my <a href="https://www.cit.tum.de/en/cit/studies/degree-programs/master-data-engineering-and-analytics/">M.Sc. in Data Engineering and Analytics</a> at the Technical University of Munich (TUM) with a DAAD Study Scholarship (Master Studies for All Academic Disciplines).</p></li>
+						<li class="older"><time datetime="2021-05">May 2021</time><p>Our paper “<a href="https://doi.org/10.1016/j.engappai.2021.104267">Building and benchmarking an Arabic Speech Commands dataset for small-footprint keyword spotting</a>” was published in <i>Engineering Applications of Artificial Intelligence</i>.</p></li>
+					</ul>
+					<button type="button" class="btn-outline js-only" id="news-more" aria-expanded="false" aria-controls="news-list"><span>Show more</span></button>
+				</section>
 
-		</main>
+				<section aria-labelledby="software">
+					<h2 id="software">Software &amp; data</h2>
+					<ul class="entries">
+						<li>
+							<span class="line"><a class="title" href="https://doi.org/10.5281/zenodo.19824587">Organoid Detection in Microscopy Images</a></span>
+							<span class="line by">Christina Bukas, Francesco Campi, <strong>Abdulkader Ghandoura</strong>, Marie Piraud</span>
+							<span class="line">A napari plugin for detecting and counting lung organoids in microscopy images, with the model checkpoints from the MultiOrg dataset benchmark.</span>
+							<span class="line venue">Zenodo, 2026 · <a href="https://doi.org/10.5281/zenodo.18710714">Checkpoints</a> · <a href="https://github.com/HelmholtzAI-Consultants-Munich/napari-organoid-counter">GitHub</a></span>
+						</li>
+						<li>
+							<span class="line"><a class="title" href="https://doi.org/10.5281/zenodo.4662481">Arabic Speech Commands Dataset</a></span>
+							<span class="line by"><strong>Abdulkader Ghandoura</strong></span>
+							<span class="line">12,000 one-second audio clips of 40 Arabic keywords, recorded from 30 participants.</span>
+							<span class="line venue">Zenodo, 2021 · <a href="https://github.com/abdulkaderghandoura/arabic-speech-commands-dataset">GitHub</a></span>
+						</li>
+					</ul>
+				</section>
+			</main>
+
+			<footer>
+				<p>© 2026 Abdulkader Ghandoura (<span lang="ar" dir="rtl">عبد القادر غندورة</span>) · <a href="privacy/">Privacy</a></p>
+				<div class="theme js-only" role="radiogroup" aria-labelledby="theme-label">
+					<span id="theme-label">Theme</span>
+					<span class="seg">
+						<label><input type="radio" name="theme" value="system"><span>System</span></label>
+						<label><input type="radio" name="theme" value="light"><span>Light</span></label>
+						<label><input type="radio" name="theme" value="dark"><span>Dark</span></label>
+					</span>
+				</div>
+			</footer>
+		</div>
+		<p class="sr-only" role="status" id="status"></p>
 	</body>
 </html>

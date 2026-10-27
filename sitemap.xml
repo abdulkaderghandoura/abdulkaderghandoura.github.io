@@ -1,48 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
       xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-  <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
+      xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <url>
     <loc>https://www.abdulkaderghandoura.com/</loc>
-
+    <lastmod>2026-10-28</lastmod>
     <image:image>
       <image:loc>https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_1x1.jpg</image:loc>
-      <image:title>Abdulkader Ghandoura - عبد القادر غندورة</image:title>
-      <image:caption>Portrait of Abdulkader Ghandoura (1:1)</image:caption>
     </image:image>
-
     <image:image>
       <image:loc>https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_4x3.jpg</image:loc>
-      <image:title>Abdulkader Ghandoura - عبد القادر غندورة</image:title>
-      <image:caption>Portrait of Abdulkader Ghandoura (4:3)</image:caption>      
     </image:image>
-
     <image:image>
       <image:loc>https://www.abdulkaderghandoura.com/assets/images/me/abdulkader-ghandoura-18032025_16x9.jpg</image:loc>
-      <image:title>Abdulkader Ghandoura - عبد القادر غندورة</image:title>
-      <image:caption>Portrait of Abdulkader Ghandoura (16:9)</image:caption>      
     </image:image>
-
-    <image:image>
-      <image:loc>https://upload.wikimedia.org/wikipedia/commons/b/bd/Abdulkader_Ghandoura_Harvard_2025.jpg</image:loc>
-      <image:title>Abdulkader Ghandoura - عبد القادر غندورة</image:title>
-      <image:caption>Portrait of Abdulkader Ghandoura at Harvard (2025)</image:caption>
-      <image:license>https://creativecommons.org/licenses/by-sa/4.0/</image:license>
-    </image:image>
-
-    <lastmod>2025-08-21T00:00:00+00:00</lastmod>
   </url>
 
   <url>
     <loc>https://www.abdulkaderghandoura.com/research/msc-thesis/</loc>
-    <lastmod>2026-10-26T00:00:00+00:00</lastmod>
+    <lastmod>2026-10-28</lastmod>
   </url>
-
 
 </urlset>
