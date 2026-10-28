@@ -185,6 +185,13 @@ footer p { margin: 0 0 14px; }
 .hl-legend { list-style: none; margin: 0; padding: 0; font-size: .74rem; color: var(--text-2); }
 .hl-legend li { display: flex; align-items: center; gap: 6px; line-height: 19px; }
 .hl-legend svg { width: 14px; height: 14px; }
+/* Locator inset: a small world map with the zoomed area outlined, beside the legend in the map's bottom-left corner */
+.hl-corner { position: absolute; display: flex; gap: 8px; align-items: stretch; }
+.hl-corner .hl-legend-box { position: static; display: flex; flex-direction: column; justify-content: center; }
+.hl-inset-box { padding: 4px; background: var(--bg); border: 1px solid var(--border-strong); border-radius: 4px; line-height: 0; }
+.hl-inset-box svg { display: block; }
+.hl-inset-land { fill: var(--border-strong); fill-opacity: .55; }
+.hl-inset-zoom { fill: none; stroke: var(--link); stroke-width: 1.5; }
 .hl-notes { font-size: .72rem; line-height: 16px; font-style: italic; color: var(--text-2); }
 .hl-notes p { margin: 0; }
 .hl-badge { display: none; width: 22px; height: 22px; }
@@ -208,7 +215,8 @@ footer p { margin: 0 0 14px; }
     .hl-phone > svg { display: block; width: 100%; height: auto; }
     .hl-pin { position: absolute; transform: translate(-50%, -50%); line-height: 0; }
     .hl-pin .hl-badge { display: block; }
-    .hl-phone .hl-legend-box { left: 6px; bottom: 6px; }
+    .hl-phone .hl-legend-box, .hl-phone .hl-corner { left: 6px; bottom: 6px; }
+    .hl-phone .hl-corner { gap: 6px; }
     .hl-list { display: grid; gap: 12px; margin-top: 16px; }
     .hl-list li { display: grid; grid-template-columns: 22px 1fr; column-gap: 8px; }
     .hl-list .hl-badge { display: block; grid-row: span 2; margin-top: -2px; }
@@ -225,5 +233,7 @@ footer p { margin: 0 0 14px; }
     .hl-land { fill: GrayText; }
     .hl .dot, .hl .house { fill: CanvasText; stroke: Canvas; }
     .hl-badge text { fill: Canvas; }
-    .hl-legend-box { border-color: CanvasText; }
+    .hl-legend-box, .hl-inset-box { border-color: CanvasText; }
+    .hl-inset-land { fill: GrayText; fill-opacity: 1; }
+    .hl-inset-zoom { stroke: CanvasText; }
 }
