@@ -11,7 +11,8 @@
     <title>Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution</title>
     <meta name="description" content="A transfer-learning framework for neural fields that achieves 4× through-plane diffusion MRI super-resolution (5 mm to 1.25 mm) with 6× faster training.">
     <link rel="canonical" href="https://www.abdulkaderghandoura.com/research/msc-thesis/">
-    <link rel="stylesheet" href="style.css">
+    <!-- Bump ?v= whenever style.css or script.js changes, so browsers don't reuse an old cached copy -->
+    <link rel="stylesheet" href="style.css?v=2026-10-28.3">
 
     <!-- Icons (this page only): fODF glyph cropped from the pipeline figure -->
     <link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48">
@@ -48,7 +49,7 @@
     <meta name="twitter:site" content="@abdulkaderghan">
     <meta name="twitter:creator" content="@abdulkaderghan">
 
-    <script src="script.js" defer></script>
+    <script src="script.js?v=2026-10-28.3" defer></script>
 
     <!-- JSON-LD (schema.org): keep in sync with the visible page; Google wants markup to match what's on the page -->
     <script type="application/ld+json">
@@ -136,7 +137,9 @@
             </div>
 
             <div class="author-notes">                
-                <p class="corresponding-author"><sup>*</sup>Corresponding author: aghandoura(at)bwh(dot)harvard(dot)edu</p>
+                <!-- The address is stored ROT13-scrambled and written out as text by script.js; the image is only a fallback without JavaScript.
+                     Dark mode (to do): invert that fallback image (filter: invert(1)) when the dark theme is active, as on the homepage -->
+                <p class="corresponding-author"><sup>*</sup>Corresponding author: <span class="email" data-e="noqhyxnqre(qbg)tunaqbhen(ng)ghz(qbg)qr"></span><noscript><img class="email-img" src="assets/email-light.png" width="252" height="18" alt="Email address (image)"></noscript><br><span class="note-old">aghandoura(at)bwh(dot)harvard(dot)edu, given in the paper, is no longer in use</span></p>
                 <p><sup>&dagger;</sup>M. Zakour is also with the Chair of Media Technology and Munich Institute of Robotics and Machine Intelligence, Technical University of Munich</p>
                 <p><sup>&Dagger;</sup>These authors share senior authorship</p>                
             </div>
@@ -174,7 +177,7 @@
             <h2>News</h2>
             <ul class="news-list">
                 <li><strong>[November 2026]</strong> Poster presentation in <a href="https://bmvc2026.bmva.org/programme/wednesday/">Session 5</a> at BMVC 2026 (Lancaster, UK).</li>
-                <li><strong>[August 2026]</strong> Paper accepted at <a href="https://bmvc2026.bmva.org/">BMVC 2026</a> (Lancaster, UK).</li>
+                <li><strong>[August 2026]</strong> Paper accepted at the <a href="https://bmvc2026.bmva.org/">British Machine Vision Conference (BMVC) 2026</a>.</li>
                 <li><strong>[January 2026]</strong> Poster presented at <a href="https://cemse.kaust.edu.sa/articles/2026/01/26/kaust-collaboration-mcit-host-second-edition-mena-machine-learning-winter">MenaML 2026</a> (Thuwal, Saudi Arabia).</li>
             </ul>
         </section>
@@ -304,6 +307,8 @@
 
             <!-- TODO: Once the proceedings are online, copy the official BibTeX from the paper's BMVC page (adds the url field) -->
             <!-- Keep the BibTeX lines flush-left: whitespace inside <pre> is displayed as-is -->
+            <div class="bib-block">
+                <div class="bib-bar"><span>BibTeX</span><button type="button" class="copy-bib" hidden>Copy</button></div>
             <pre><code>@inproceedings{Ghandoura_2026_BMVC,
   author    = {Abdulkader Ghandoura and Marsil Zakour and William Consagra and Yogesh Rathi},
   title     = {Prior-Guided Implicit Neural Representations for Single-Subject Diffusion MRI Super-Resolution},
@@ -311,7 +316,7 @@
   publisher = {BMVA},
   year      = {2026}
 }</code></pre>
-            <div class="bib-actions"><button type="button" class="copy-bib" hidden>Copy</button></div>
+            </div>
         </section>        
 
         <!-- Footer -->

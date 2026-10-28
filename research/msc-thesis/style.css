@@ -85,7 +85,7 @@ h1 {
 
 .author-notes {
     font-size: 0.8rem;
-    color: #888;
+    color: #666;
     line-height: 1.5;
     text-align: center;
     margin-top: 15px;
@@ -94,10 +94,25 @@ h1 {
 .author-notes p {
     margin: 2px 0;
     text-align: center;
+    text-wrap: balance;
 }
 
 .author-notes .corresponding-author {
     margin-bottom: 10px;
+}
+
+/* Second line of the corresponding-author note: the paper's old address */
+.author-notes .note-old {
+    font-size: 0.92em;
+    font-style: italic;
+}
+
+/* Fallback image of the email for visitors without JavaScript (rendered at 3x), sized in em to sit on the note's baseline.
+   Dark mode (to do): add filter: invert(1) for the dark theme, as the homepage does for its email image. */
+.author-notes .email-img {
+    width: 19.688em;
+    height: 1.406em;
+    vertical-align: -0.339em;
 }
 
 /* Logos */
@@ -284,10 +299,35 @@ code {
     color: #333;
 }
 
-.bib-actions {
+/* BibTeX block: a header bar (label + Copy) above the code */
+.bib-block {
+    margin: 15px 0;
+    border: 1px solid #e1e4e8;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.bib-bar {
     display: flex;
-    justify-content: flex-end;
-    margin-top: -5px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 10px 6px 1.5rem;
+    background-color: #eceef1;
+    border-bottom: 1px solid #e1e4e8;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+.bib-block pre {
+    margin: 0;
+    border-radius: 0;
+}
+
+@media (max-width: 768px) {
+    .bib-bar {
+        padding-left: 1rem;
+    }
 }
 
 .copy-bib {
@@ -295,7 +335,7 @@ code {
     font-size: 0.85rem;
     color: #1c1f23;
     background: #fff;
-    border: 1px solid #868e96;
+    border: 1px solid #7d858d;
     border-radius: 6px;
     padding: 3px 10px;
     cursor: pointer;

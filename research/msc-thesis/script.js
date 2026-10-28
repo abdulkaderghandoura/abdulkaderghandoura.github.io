@@ -5,6 +5,14 @@ if (!link.getAttribute('href').startsWith('#')) {
 }
 });
 
+// Corresponding author's email: stored ROT13-scrambled, written out as text after the page loads
+document.querySelectorAll('.email[data-e]').forEach(el => {
+    el.textContent = el.dataset.e.replace(/[a-z]/gi, c => {
+        const base = c <= 'Z' ? 65 : 97;
+        return String.fromCharCode((c.charCodeAt(0) - base + 13) % 26 + base);
+    });
+});
+
 // Copy button for the BibTeX block
 const copyBib = document.querySelector('.copy-bib');
 if (copyBib && navigator.clipboard) {
