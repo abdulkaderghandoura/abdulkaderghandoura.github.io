@@ -9,4 +9,4 @@ https://www.abdulkaderghandoura.com/
 - **Institution logos and the ORCID iD icon**: belong to their respective owners.
 - **Map** in "Selected highlights": made with [Natural Earth](https://www.naturalearthdata.com/) (public domain).
 - **Flags** (`assets/images/flags/`): [flag-icons](https://github.com/lipis/flag-icons), MIT License (see `assets/images/flags/LICENSE`).
-- **House icon** in "Selected highlights": [Bootstrap Icons](https://github.com/twbs/icons) `house-fill`, MIT License, Copyright (c) 2019-2024 The Bootstrap Authors.
+- **Icons** `house-fill` (map in "Selected highlights") and `geo-alt-fill` (location in the header): [Bootstrap Icons](https://github.com/twbs/icons) 1.11.3, MIT License, Copyright (c) 2019-2024 The Bootstrap Authors.

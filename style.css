@@ -92,20 +92,40 @@ button { font: inherit; cursor: pointer; }
 @media (prefers-reduced-motion: reduce) { .caret { transition: none; } }
 
 /* Header */
-header { text-align: center; margin-bottom: 44px; }
+/* One gap between the header's blocks: name, interests (kept together), location, links */
+header { text-align: center; margin-bottom: 44px; --header-gap: 14px; }
 .portrait { display: block; margin: 0 auto; width: 150px; height: 150px; border-radius: 50%; object-fit: cover; }
 /* The iD icon scales with the name (0.74em matches the measured cap height) and sits on its baseline,
    so it spans the capital letters at every screen size (20-26px, within ORCID's size range). */
-.name-row { margin: 18px 0 10px; font-size: clamp(1.7rem, 1.3rem + 1.4vw, 2.2rem); line-height: 1.2; }
+.name-row { margin: 18px 0 var(--header-gap); font-size: clamp(1.7rem, 1.3rem + 1.4vw, 2.2rem); line-height: 1.2; }
 h1 { display: inline; font-size: 1em; font-weight: 650; }
 .orcid { display: inline-block; margin-left: .3em; vertical-align: baseline; border-radius: 50%; }
 .orcid img { display: block; width: .74em; height: .74em; }
 .meta { margin: 0; color: var(--text-2); line-height: 1.5; }
-.meta + .meta { margin-top: 6px; }
-.links-row { list-style: none; padding: 0; margin: 26px 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 0; }
-.links-row li:not(:last-child)::after { content: "·"; color: var(--text-2); margin: 0 8px; }
+.meta + .meta { margin-top: var(--header-gap); }
+/* Interests: one line with dots when it fits (about 455-500 px of text), otherwise one per line, kept together as a group */
+.interests { list-style: none; padding: 0; }
+.interests li { display: inline; white-space: nowrap; }
+.interests li:not(:last-child)::after { content: " ·"; content: " ·" / ""; }
+/* Map pin (Bootstrap Icons geo-alt-fill) marks the location line, so it doesn't read as another interest */
+.pin { width: .85em; height: .85em; margin-right: .3em; vertical-align: -.1em; fill: currentColor; }
+@media (max-width: 34em) {
+    .interests li { display: block; }
+    .interests li:not(:last-child)::after { content: none; }
+}
+.links-row { list-style: none; padding: 0; margin: var(--header-gap) 0 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 4px 0; }
+/* The dot goes before each link, so the Email button (last, hidden without JavaScript) never leaves a dot behind */
+.links-row li + li::before { content: "·"; content: "·" / ""; color: var(--text-2); margin: 0 8px; }
 .links-row a { text-decoration: none; }
 .links-row a:hover { text-decoration: underline; }
+/* When the row doesn't fit one line (about 535-575 px of text), break it after the 3rd link (GitHub) into two balanced
+   lines, professional profiles first, then social ones and Email; the 4th link (X) starts line 2 without a dot */
+@media (max-width: 38.5em) {
+    .links-row { row-gap: 2px; }
+    .links-row::after { content: ""; flex-basis: 100%; order: 2; }
+    .links-row li:nth-child(n+4) { order: 3; }
+    .links-row li:nth-child(4)::before { content: none; }
+}
 .email-panel { margin-top: 14px; }
 .email-box { display: inline-flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 8px 12px; max-width: 100%; padding: 8px 14px; background: var(--surface); border: 1px solid var(--border); border-radius: 8px; }
 .email-img { display: block; max-width: 100%; height: auto; filter: var(--img-filter); }
@@ -144,7 +164,9 @@ footer p { margin: 0 0 14px; }
 
 /* Privacy page */
 .page-title { font-size: 1.6rem; line-height: 1.25; margin: 0 0 6px; font-weight: 650; }
-.back { display: inline-block; margin-bottom: 28px; }
+/* A standalone back link, not a link in running text: no underline (like the homepage links row), underline on hover */
+.back { display: inline-block; margin-bottom: 28px; text-decoration: none; }
+.back:hover { text-decoration: underline; }
 .updated { color: var(--text-2); font-size: .9rem; }
 
 /* Selected highlights: map with labels beside it (desktop) or numbered markers and a list (phones) */
