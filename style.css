@@ -214,7 +214,8 @@ footer p { margin: 0 0 14px; }
     .hl-phone { position: relative; }
     .hl-phone > svg { display: block; width: 100%; height: auto; }
     .hl-pin { position: absolute; transform: translate(-50%, -50%); line-height: 0; }
-    .hl-pin .hl-badge { display: block; }
+    .hl-pin .hl-badge { display: block; width: 20px; height: 20px; }
+    .hl-pin .hl-badge text { font-size: 10px; }
     .hl-phone .hl-legend-box, .hl-phone .hl-corner { left: 6px; bottom: 6px; }
     .hl-phone .hl-corner { gap: 6px; }
     .hl-list { display: grid; gap: 12px; margin-top: 16px; }
